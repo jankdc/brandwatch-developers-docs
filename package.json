@@ -1,0 +1,18 @@
+{
+  "name": "brandwatch-developers-docs",
+  "version": "1.0.0",
+  "description": "Brandwatch Developers documentation, ported from readme.io",
+  "main": "gitbook serve",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "gitbook-plugin-theme-api": "^1.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "gitbook serve"
+  },
+  "author": "",
+  "license": "ISC"
+}
