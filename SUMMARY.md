@@ -1,6 +1,6 @@
 # Summary
 
-* [Tapir API](README.md)
+* [Tapir API](tapir-api/tapir-overview.md)
     * [Getting Started with Tapir](tapir-api/getting-started.md)
 * [Tapir Tutorial](tapir-tutorial/1-introduction.md)
     * [Creating a Source](tapir-tutorial/2-creating-a-source.md)
