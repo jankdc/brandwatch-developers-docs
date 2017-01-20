@@ -1,0 +1,383 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Tapir API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tapir-api/getting-started.html" />
+    
+    
+
+    </head>
+    <body>
+        
+  <header id="bw-header">
+    <h1><a href="/">Brandwatch Developers</a></h1>
+    <div class="links">
+      <a href="./">docs</a>
+      <a href="https://support.brandwatch.com">support</a>
+    </div>
+  </header>
+
+  
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Tapir API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="tapir-api/getting-started.html">
+            
+                <a href="tapir-api/getting-started.html">
+            
+                    
+                    Getting Started with Tapir
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="tapir-tutorial/1-introduction.html">
+            
+                <a href="tapir-tutorial/1-introduction.html">
+            
+                    
+                    Tapir Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="tapir-tutorial/2-creating-a-source.html">
+            
+                <a href="tapir-tutorial/2-creating-a-source.html">
+            
+                    
+                    Creating a Source
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="tapir-tutorial/3-creating-a-destination.html">
+            
+                <a href="tapir-tutorial/3-creating-a-destination.html">
+            
+                    
+                    Creating a Destination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="tapir-tutorial/4-transforming-our-data.html">
+            
+                <a href="tapir-tutorial/4-transforming-our-data.html">
+            
+                    
+                    Transforming our Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="tapir-tutorial/5-putting-the-pieces-together.html">
+            
+                <a href="tapir-tutorial/5-putting-the-pieces-together.html">
+            
+                    
+                    Putting the Pieces Together
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="tapir-tutorial/6-testing-a-complete-bundle.html">
+            
+                <a href="tapir-tutorial/6-testing-a-complete-bundle.html">
+            
+                    
+                    Testing a Complete Bundle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="tapir-tutorial/7-reusing-code-to-make-a-second-bundle.html">
+            
+                <a href="tapir-tutorial/7-reusing-code-to-make-a-second-bundle.html">
+            
+                    
+                    Reusing Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Tapir API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Before diving into coding with Tapir, it&apos;s helpful to understand what the framework is meant to help you do. A bundle/app allows you to combine a data source or sources, transformations, and/or a destination where the data will be output. The bundle itself is a kind of controller overseeing the composition of those pieces and packaging the whole process up to be used within Vizia. Tapir itself includes a number of off the shelf utilities from each of the three areas of concern (sources, transforms, and destinations), but it also includes more abstract modules you can use as the basis for custom code. To see what a bundle looks like with a bare minimum of custom code, have a look at <a href="https://github.com/vizia/tapir/tree/master/examples/csv" target="_blank">the CSV example in Tapir</a>.</p>
+<p>To do something more powerful, you can use custom components in combination with the tools already available in Vizia, or to combine existing tools in a custom configuration. All three types of components are written as separate modules which will be dependencies of your main bundle module. For a bundle with custom modules you&apos;ve written for each area of concern, a file structure might look like this:</p>
+<pre><code>/custom-bundle
+ |-/destination
+    |-/templates
+       |-template.hbs
+    |-destination-module.js
+    |-destination.css
+ |-/transforms
+    |-date-transform-module.js
+    |-text-transform-module.js
+ |-bundle.js
+ |-source-module.js
+</code></pre><p>Dependency management is even more straight-forward than that. As mentioned, bundles require the other pieces as dependencies. For most of the individual components, it&apos;s likely that you&apos;ll get some advantage from requiring the Tapir modules and extending their functionality. However, because functionality is piped together, those dependencies shouldn&apos;t need to go more than one level deep for most scenarios and modules can remain lightweight. Sources and transforms can easily be stand-alone modules because their work is fairly specific (fetching data from one place or transforming it in a single way, respectively). Destinations are more likely to be composed of other code in addition to the destination module itself if they require display resources such as HTML or CSS.</p>
+<p>Tapir is relatively light on convention, but there are a few important things to note about each of these modules to make them work together. One thing that applies to all of them is the way they&apos;re composed; they&apos;re chained together in the bundle in the order source &#x2192; transform[s] &#x2192; destination. The bundle pulls all the pieces together with a series of calls to its <code>use</code> method, which it inherits as an instance of a Tapir bundle. It might look like this:</p>
+<pre><code>var custom_bundle = tapir();
+custom_bundle.use( source_module )
+  .use( split() )
+  .use( date_transform() )
+  .use( text_transform() )
+  .use( destination_module );
+module.exports = custom_bundle;
+</code></pre><p>Whether <code>use</code> is passed a variable name or function call depends on the structure of the module being called. If the module exports a function named <code>create</code> you can reference it with <code>.use( module_name )</code> and the framework will do the rest. You&apos;d use <code>create</code> if you wanted to pass in the config object when the module was used. Otherwise, you can name your functions anything you like, export what you like, and pass in whatever arguments you need directly from the bundle.</p>
+<p>Although data sources can be anything you like, Tapir contains utilities for the most common, arrays and XHRs. Using the array or http sources, you can create a data source with relatively little code. If your data needs further transformation (for example, extracting it from a response object), you can handle that within your source or further down the chain. </p>
+<p>Transform modules are perhaps the most portable piece of a bundle, so they&apos;re slightly more likely to exist as functions that act on any data they receive in an agnostic way, not looking for certain external config properties. Because of how bundles are chained together, they&apos;re likely to contain something resembling the following pattern (which will quickly become familiar): </p>
+<pre><code>module.exports = function() { return transform( function(data) {...} )};
+</code></pre><p>When the framework calls your transform it will pass its data as it currently exists (so any previous transforms will have been applied).</p>
+<p>Because they&apos;re the end of our chain of functionality, destinations can be more complicated. If you require the destination utility module as a dependency, you can call that to get a reference to its <code>fetchData</code> method. Calling <code>fetchData</code> allows you to backtrack all the way to the beginning of the chain with requesting code&#x2013;beginning with your rendering code in the destination&#x2013;calling back to the previous step once it&apos;s ready to process it. Separating your code into callbacks will work differently depending on what you&apos;d like your destination to do, so it&apos;s best to start with tutorial code and then begin to experiment. </p>
+<p>Once you begin to explore <a href="https://brandwatch-developers.readme.io/docs/1-introduction" target="_blank">coding a more complex bundle</a> you may begin to wonder about one more important Tapir convention, the pattern of returning function calls mentioned above. You might have expected that functions would return variables or a framework object. Those latter conventions would work well for creating a tidy chain with static data, but passing callbacks is something we do to support working with streaming data. This way, if we receive additional data from our source it&apos;s piped through all the same functionality as the data we had already and then added to our destination. </p>
+<p>Adding your bundle/app to Vizia will require changes to outside configurations; it can&apos;t all be done via your own code. However, there are a few things you will do in your bundle directory and/or repo to make it usable. If you don&apos;t have one already, you&apos;ll need to create a built version of your code, and you&apos;ll need to add the location of the built JavaScript to a <code>manifest.json</code> file as the <code>app</code> property. The rest of the work will need to be done in Vizia itself. Once you have your bundle ready, you can read the <a href="https://docs.google.com/document/d/1BFhFzcvKBUjPH9Hnp8eHj_AwMSS_9wVRMgwtVQgwtIo/edit" target="_blank">details of how to add it</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Tapir API","excerpt":"What is Tapir?","level":"1.1","depth":1,"next":{"title":"Getting Started with Tapir","level":"1.1.1","depth":2,"path":"tapir-api/getting-started.md","ref":"tapir-api/getting-started.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2017-01-20T10:16:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-20T15:59:11.806Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

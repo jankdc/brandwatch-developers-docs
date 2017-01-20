@@ -1,0 +1,622 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Creating a Source · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3-creating-a-destination.html" />
+    
+    
+    <link rel="prev" href="1-introduction.html" />
+    
+
+    </head>
+    <body>
+        
+  <header id="bw-header">
+    <h1><a href="/">Brandwatch Developers</a></h1>
+    <div class="links">
+      <a href="./">docs</a>
+      <a href="https://support.brandwatch.com">support</a>
+    </div>
+  </header>
+
+  
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Tapir API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../tapir-api/getting-started.html">
+            
+                <a href="../tapir-api/getting-started.html">
+            
+                    
+                    Getting Started with Tapir
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1-introduction.html">
+            
+                <a href="1-introduction.html">
+            
+                    
+                    Tapir Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="2-creating-a-source.html">
+            
+                <a href="2-creating-a-source.html">
+            
+                    
+                    Creating a Source
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="3-creating-a-destination.html">
+            
+                <a href="3-creating-a-destination.html">
+            
+                    
+                    Creating a Destination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="4-transforming-our-data.html">
+            
+                <a href="4-transforming-our-data.html">
+            
+                    
+                    Transforming our Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="5-putting-the-pieces-together.html">
+            
+                <a href="5-putting-the-pieces-together.html">
+            
+                    
+                    Putting the Pieces Together
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="6-testing-a-complete-bundle.html">
+            
+                <a href="6-testing-a-complete-bundle.html">
+            
+                    
+                    Testing a Complete Bundle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="7-reusing-code-to-make-a-second-bundle.html">
+            
+                <a href="7-reusing-code-to-make-a-second-bundle.html">
+            
+                    
+                    Reusing Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Creating a Source</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Both apps that we wish to create consume the Monzo api&apos;s <a href="https://monzo.com/docs/#list-transactions" target="_blank"><code>/transactions</code></a> endpoint. Below is the <a href="https://httpie.org/" target="_blank">httpie</a> command to view this endpoint.</p>
+<pre><code class="lang-shell">http &quot;https://api.monzo.com/transactions&quot; \
+    &quot;Authorization: Bearer $access_token&quot; \
+    &quot;account_id==$account_id&quot;
+</code></pre>
+<p>We expect JSON data back in the following format:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;transactions&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;account_balance&quot;</span>: <span class="hljs-number">13013</span>,
+            <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-number">-510</span>,
+            <span class="hljs-string">&quot;created&quot;</span>: <span class="hljs-string">&quot;2015-08-22T12:20:18Z&quot;</span>,
+            <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;GBP&quot;</span>,
+            <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;THE DE BEAUVOIR DELI C LONDON        GBR&quot;</span>,
+            <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;tx_00008zIcpb1TB4yeIFXMzx&quot;</span>,
+            <span class="hljs-string">&quot;merchant&quot;</span>: <span class="hljs-string">&quot;merch_00008zIcpbAKe8shBxXUtl&quot;</span>,
+            <span class="hljs-string">&quot;metadata&quot;</span>: {},
+            <span class="hljs-string">&quot;notes&quot;</span>: <span class="hljs-string">&quot;Salmon sandwich &#x1F35E;&quot;</span>,
+            <span class="hljs-string">&quot;is_load&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;settled&quot;</span>: <span class="hljs-string">&quot;2015-08-23T12:20:18Z&quot;</span>,
+            <span class="hljs-string">&quot;category&quot;</span>: <span class="hljs-string">&quot;eating_out&quot;</span>
+        },
+        {
+            <span class="hljs-string">&quot;account_balance&quot;</span>: <span class="hljs-number">12334</span>,
+            <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-number">-679</span>,
+            <span class="hljs-string">&quot;created&quot;</span>: <span class="hljs-string">&quot;2015-08-23T16:15:03Z&quot;</span>,
+            <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;GBP&quot;</span>,
+            <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;VUE BSL LTD            ISLINGTON     GBR&quot;</span>,
+            <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;tx_00008zL2INM3xZ41THuRF3&quot;</span>,
+            <span class="hljs-string">&quot;merchant&quot;</span>: <span class="hljs-string">&quot;merch_00008z6uFVhVBcaZzSQwCX&quot;</span>,
+            <span class="hljs-string">&quot;metadata&quot;</span>: {},
+            <span class="hljs-string">&quot;notes&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;is_load&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;settled&quot;</span>: <span class="hljs-string">&quot;2015-08-24T16:15:03Z&quot;</span>,
+            <span class="hljs-string">&quot;category&quot;</span>: <span class="hljs-string">&quot;eating_out&quot;</span>
+        },
+    ]
+}
+</code></pre>
+<p>Making a Tapir source that consumes JSON over HTTP is super-easy, as the framework supplies both a <code>http</code> source and a <code>json</code> transform. Let&apos;s look at what the finished source will look like, and then break it down and explain how it fits together.</p>
+<pre><code class="lang-javascript"><span class="hljs-meta">&apos;use strict&apos;</span>;
+
+<span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vizia/tapir/sources/http&apos;</span>);
+<span class="hljs-keyword">var</span> json = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vizia/tapir/transforms/json&apos;</span>);
+<span class="hljs-keyword">var</span> MONDO_API_URL = <span class="hljs-string">&apos;https://api.getmondo.co.uk&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">create</span>(<span class="hljs-params">config</span>) </span>{
+    <span class="hljs-comment">// set up a tapir transform that parses the `transaction` property from</span>
+    <span class="hljs-comment">// the response JSON.</span>
+    <span class="hljs-keyword">var</span> parse = json(<span class="hljs-string">&apos;transactions.*&apos;</span>);
+    <span class="hljs-keyword">var</span> url = MONDO_API_URL + <span class="hljs-string">&apos;/transactions?account_id=&apos;</span> + config.accountId;
+
+    <span class="hljs-comment">// optional config to set an end date for the transactions</span>
+    <span class="hljs-keyword">if</span> (config.before) {
+        url = url + <span class="hljs-string">&apos;&amp;before=&apos;</span> + config.before;
+    }
+
+    <span class="hljs-comment">// optional config to set a start date for the transactions</span>
+    <span class="hljs-keyword">if</span> (config.since) {
+        url = url + <span class="hljs-string">&apos;&amp;since=&apos;</span> + config.since;
+    }
+
+    <span class="hljs-comment">// optional config to hydrate the `merchant` property in each transaction</span>
+    <span class="hljs-keyword">if</span> (config.fetchMerchantDetails) {
+        url = url + <span class="hljs-string">&apos;&amp;expand[]=merchant&apos;</span>;
+    }
+
+    <span class="hljs-comment">// set up the oAuth 2.0 Header.</span>
+    <span class="hljs-keyword">var</span> options = {
+        headers: {
+            Authorization: <span class="hljs-string">&apos;Bearer &apos;</span> + config.accessToken
+        }
+    };
+
+    <span class="hljs-comment">// expose a composed method to execute the request and transform</span>
+    <span class="hljs-comment">// the resulted json into a tapir stream of transaction objects</span>
+    <span class="hljs-keyword">return</span> parse(http(url, options));
+}
+
+exports.create = create;
+</code></pre>
+<p>Nice! The code is pretty straightforward, as all the heavy-lifting is done by Tapir. Having said that, there&apos;s a couple of things to highlight:</p>
+<ol>
+<li><p>We set up the transform for the json (in the <code>var parse</code>) <em>inside</em> the scope of the <code>create</code> function. This is important as the internal buffer for the transform needs to be scoped to the function.</p>
+</li>
+<li><p>By exposing a create property on the exports, the Tapir framework knows that we are expecting it to supply the bundle config to the exported function. This is a convention across Tapir, so bear it in mind whenever you need runtime config in your sources, transforms or destinations.</p>
+</li>
+</ol>
+<h2 id="testing-our-source">Testing our Source</h2>
+<p>A really nice way to test HTTP sources is using the <a href="https://github.com/node-nock/nock" target="_blank"><code>nock</code></a> http mocking and expectations library. Nock allows us to set up expectations for the exact format of the outgoing request, as well as specify a dummy response.</p>
+<p>In the tests below we&apos;re using <code>tape</code>, a very lightweight TAP-compliant testing library that we can execute from the command line.</p>
+<p>If you&apos;re coding along with this tutorial, make sure to:</p>
+<p>Let&apos;s look at some code that does the initial test suite setup: </p>
+<pre><code class="lang-javascript"><span class="hljs-meta">&apos;use strict&apos;</span>;
+
+<span class="hljs-keyword">const</span> transactions = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../lib/transactions&apos;</span>);
+<span class="hljs-keyword">const</span> MONDO_API_URL = <span class="hljs-string">&apos;https://api.getmondo.co.uk:443&apos;</span>;
+
+<span class="hljs-keyword">const</span> jsonResponse = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./fixtures/transactions.json&apos;</span>);
+
+<span class="hljs-keyword">const</span> test = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;tape&apos;</span>);
+
+<span class="hljs-keyword">const</span> nock = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;nock&apos;</span>);
+nock.disableNetConnect();
+
+<span class="hljs-keyword">const</span> XMLHttpRequest = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;xhr2&apos;</span>).XMLHttpRequest;
+global.XMLHttpRequest = XMLHttpRequest;
+</code></pre>
+<blockquote>
+<p>Note that in the tests above we rely on the <code>xhr2</code> module. This is because we&apos;re executing our tests in node, and there&apos;s no <code>window</code> object. Tapir&apos;s <code>http</code> module uses <code>window.XMLHttpRequest</code> under the hood so we use <code>xhr2</code> here and hang it off the <code>global</code> object whilst the tests run.
+If you&apos;re coding along with this tutorial, make sure to <code>npm install nock tape xhr2 --save-dev</code> to install these dev dependencies.</p>
+</blockquote>
+<p>Here&apos;s our first test:</p>
+<pre><code class="lang-javascript">test(<span class="hljs-string">&apos;creates a function when passed config&apos;</span>, assert =&gt; {
+    <span class="hljs-keyword">const</span> config = {};
+    <span class="hljs-keyword">const</span> source = transactions.create(config);
+
+    assert.equal(<span class="hljs-keyword">typeof</span> source, <span class="hljs-string">&apos;function&apos;</span>, <span class="hljs-string">&apos;should create function&apos;</span>);
+    assert.end();
+});
+</code></pre>
+<p>This is pretty much a self-explanatory smoke test.</p>
+<p>Other things we should test in this suite are:</p>
+<ol>
+<li>Appending the expected request parameters to the Monzo api call, based on the supplied Config</li>
+<li>Making sure we add in the oAuth header </li>
+<li>Checking that we parse the transactions out of the JSON response</li>
+</ol>
+<p>Let&apos;s look at testing the config&apos;s effect on the api call next:</p>
+<pre><code class="lang-javascript">test(<span class="hljs-string">&apos;calls the mondo api transactions endpoint with the account id&apos;</span>, assert =&gt; {
+    <span class="hljs-keyword">const</span> config = {
+        accountId: <span class="hljs-string">&apos;accountId&apos;</span>
+    };
+
+    <span class="hljs-keyword">const</span> scope = nock(MONDO_API_URL, { encodedQueryParams : <span class="hljs-literal">true</span> })
+        .get(<span class="hljs-string">&apos;/transactions&apos;</span>)
+        .query({ account_id: config.accountId })
+        .reply(<span class="hljs-number">200</span>, jsonResponse);
+
+    <span class="hljs-keyword">const</span> source = transactions.create(config);
+
+    source(<span class="hljs-literal">null</span>, (end, data) =&gt; {
+        assert.true(scope.isDone(), <span class="hljs-string">&apos;request made&apos;</span>);
+        assert.end();
+    });
+});
+
+test(<span class="hljs-string">&apos;calls the mondo api transactions endpoint with the before date&apos;</span>, assert =&gt; {
+    <span class="hljs-keyword">const</span> config = {
+        accountId: <span class="hljs-string">&apos;accountId&apos;</span>,
+        before: <span class="hljs-string">&apos;2016-08-01T23:00:00Z&apos;</span>
+    };
+
+    <span class="hljs-keyword">const</span> scope = nock(MONDO_API_URL, { encodedQueryParams : <span class="hljs-literal">true</span> })
+        .get(<span class="hljs-string">&apos;/transactions&apos;</span>)
+        .query({
+            account_id: config.accountId,
+            before: config.before
+        })
+        .reply(<span class="hljs-number">200</span>, jsonResponse);
+
+    <span class="hljs-keyword">const</span> source = transactions.create(config);
+
+    source(<span class="hljs-literal">null</span>, (end, data) =&gt; {
+        assert.true(scope.isDone(), <span class="hljs-string">&apos;request made&apos;</span>);
+        assert.end();
+    });
+});
+
+test(<span class="hljs-string">&apos;calls the mondo api transactions endpoint with the since date&apos;</span>, assert =&gt; {
+    <span class="hljs-keyword">const</span> config = {
+        accountId: <span class="hljs-string">&apos;accountId&apos;</span>,
+        since: <span class="hljs-string">&apos;2016-08-01T23:00:00Z&apos;</span>
+    };
+
+    <span class="hljs-keyword">const</span> scope = nock(MONDO_API_URL, { encodedQueryParams : <span class="hljs-literal">true</span> })
+        .get(<span class="hljs-string">&apos;/transactions&apos;</span>)
+        .query({
+            account_id: config.accountId,
+            since: config.since
+        })
+        .reply(<span class="hljs-number">200</span>, jsonResponse);
+
+    <span class="hljs-keyword">const</span> source = transactions.create(config);
+
+    source(<span class="hljs-literal">null</span>, (end, data) =&gt; {
+        assert.true(scope.isDone(), <span class="hljs-string">&apos;request made&apos;</span>);
+        assert.end();
+    });
+});
+
+test(<span class="hljs-string">&apos;expands merchants if config specifies&apos;</span>, assert =&gt; {
+    <span class="hljs-keyword">const</span> config = {
+        accountId: <span class="hljs-string">&apos;accountId&apos;</span>,
+        since: <span class="hljs-string">&apos;2016-08-01T23:00:00Z&apos;</span>,
+        fetchMerchantDetails: <span class="hljs-literal">true</span>
+    };
+
+    <span class="hljs-keyword">const</span> scope = nock(MONDO_API_URL, { encodedQueryParams : <span class="hljs-literal">true</span> })
+        .get(<span class="hljs-string">&apos;/transactions&apos;</span>)
+        .query({
+            account_id: config.accountId,
+            since: config.since,
+            expand: [<span class="hljs-string">&apos;merchant&apos;</span>]
+        })
+        .reply(<span class="hljs-number">200</span>, jsonResponse);
+
+    <span class="hljs-keyword">const</span> source = transactions.create(config);
+
+    source(<span class="hljs-literal">null</span>, (end, data) =&gt; {
+        assert.true(scope.isDone(), <span class="hljs-string">&apos;request made&apos;</span>);
+        assert.end();
+    });
+});
+</code></pre>
+<p>Next let&apos;s test we added the oAuth header from the config:</p>
+<pre><code class="lang-javascript">test(<span class="hljs-string">&apos;calls the mondo api transactions endpoint with the oauth token header&apos;</span>, assert =&gt; {
+    <span class="hljs-keyword">const</span> config = {
+        accountId: <span class="hljs-string">&apos;accountId&apos;</span>,
+        accessToken: <span class="hljs-string">&apos;coole-token&apos;</span>
+    };
+
+    <span class="hljs-keyword">const</span> scope = nock(MONDO_API_URL, { encodedQueryParams : <span class="hljs-literal">true</span> })
+        .matchHeader(<span class="hljs-string">&apos;Authorization&apos;</span>, <span class="hljs-string">&apos;Bearer &apos;</span> + config.accessToken)
+        .get(<span class="hljs-string">&apos;/transactions&apos;</span>)
+        .query({
+            account_id: config.accountId
+        })
+        .reply(<span class="hljs-number">200</span>, jsonResponse);
+
+    <span class="hljs-keyword">const</span> source = transactions.create(config);
+
+    source(<span class="hljs-literal">null</span>, (end, data) =&gt; {
+        assert.true(scope.isDone(), <span class="hljs-string">&apos;request made&apos;</span>);
+        assert.end();
+    });
+});
+</code></pre>
+<p>Finally, lets&apos; add a test to ensure we parsed the transaction objects out of the response JSON:</p>
+<pre><code class="lang-javascript">test(<span class="hljs-string">&apos;returns parsed Monzo transaction objects&apos;</span>, assert =&gt; {
+    <span class="hljs-keyword">const</span> config = {
+        accountId: <span class="hljs-string">&apos;accountId&apos;</span>
+    };
+
+    <span class="hljs-keyword">const</span> scope = nock(MONDO_API_URL, { encodedQueryParams : <span class="hljs-literal">true</span> })
+        .get(<span class="hljs-string">&apos;/transactions&apos;</span>)
+        .query({
+            account_id: config.accountId
+        })
+        .reply(<span class="hljs-number">200</span>, jsonResponse);
+
+    <span class="hljs-keyword">const</span> source = transactions.create(config);
+
+    source(<span class="hljs-literal">null</span>, (end, data) =&gt; {
+        <span class="hljs-keyword">const</span> expected = jsonResponse.transactions[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">const</span> actual = data;
+
+        assert.true(scope.isDone(), <span class="hljs-string">&apos;request made&apos;</span>);
+        assert.equal(actual, data, <span class="hljs-string">&apos;responded with JSON&apos;</span>);
+
+        assert.end();
+    });
+</code></pre>
+<p>Great! Now we have a completed Tapir Source that&apos;s ready to use in our bundles.</p>
+<blockquote>
+<p>Remember you can clone the tutorial repo at <a href="https://github.com/vizia/monzo-tapir" target="_blank">https://github.com/vizia/monzo-tapir</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Creating a Source","excerpt":"","level":"1.2.1","depth":2,"next":{"title":"Creating a Destination","level":"1.2.2","depth":2,"path":"tapir-tutorial/3-creating-a-destination.md","ref":"tapir-tutorial/3-creating-a-destination.md","articles":[]},"previous":{"title":"Tapir Tutorial","level":"1.2","depth":1,"path":"tapir-tutorial/1-introduction.md","ref":"tapir-tutorial/1-introduction.md","articles":[{"title":"Creating a Source","level":"1.2.1","depth":2,"path":"tapir-tutorial/2-creating-a-source.md","ref":"tapir-tutorial/2-creating-a-source.md","articles":[]},{"title":"Creating a Destination","level":"1.2.2","depth":2,"path":"tapir-tutorial/3-creating-a-destination.md","ref":"tapir-tutorial/3-creating-a-destination.md","articles":[]},{"title":"Transforming our Data","level":"1.2.3","depth":2,"path":"tapir-tutorial/4-transforming-our-data.md","ref":"tapir-tutorial/4-transforming-our-data.md","articles":[]},{"title":"Putting the Pieces Together","level":"1.2.4","depth":2,"path":"tapir-tutorial/5-putting-the-pieces-together.md","ref":"tapir-tutorial/5-putting-the-pieces-together.md","articles":[]},{"title":"Testing a Complete Bundle","level":"1.2.5","depth":2,"path":"tapir-tutorial/6-testing-a-complete-bundle.md","ref":"tapir-tutorial/6-testing-a-complete-bundle.md","articles":[]},{"title":"Reusing Code","level":"1.2.6","depth":2,"path":"tapir-tutorial/7-reusing-code-to-make-a-second-bundle.md","ref":"tapir-tutorial/7-reusing-code-to-make-a-second-bundle.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-tutorial/2-creating-a-source.md","mtime":"2017-01-20T15:21:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-20T15:59:11.806Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
