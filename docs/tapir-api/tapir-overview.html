@@ -72,7 +72,7 @@
     </head>
     <body>
         
-<div id="bw-page">
+<div id="bw-page" tabindex="-1">
   <header id="bw-header">
     <h1><a href="./">Brandwatch Developers</a></h1>
     <div class="links">
@@ -284,12 +284,9 @@
 
 
 
-                    <div class="page-wrapper" tabindex="-1" role="main">
+                    <div class="page-wrapper" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
-    <div class="search-noresults">
-    
                                 <section class="normal markdown-section">
                                 
                                 <p>Before diving into coding with Tapir, it&apos;s helpful to understand what the framework is meant to help you do. A bundle/app allows you to combine a data source or sources, transformations, and/or a destination where the data will be output. The bundle itself is a kind of controller overseeing the composition of those pieces and packaging the whole process up to be used within Vizia. Tapir itself includes a number of off the shelf utilities from each of the three areas of concern (sources, transforms, and destinations), but it also includes more abstract modules you can use as the basis for custom code. To see what a bundle looks like with a bare minimum of custom code, have a look at <a href="https://github.com/vizia/tapir/tree/master/examples/csv" target="_blank">the CSV example in Tapir</a>.</p>
@@ -326,22 +323,6 @@ module.exports = custom_bundle;
                                 
                                 </section>
                             
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
                         </div>
                     </div>
                 
@@ -355,7 +336,7 @@ module.exports = custom_bundle;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tapir API","excerpt":"What is Tapir?","level":"1.2","depth":1,"next":{"title":"Getting Started with Tapir","level":"1.2.1","depth":2,"path":"tapir-api/getting-started.md","ref":"./tapir-api/getting-started.md","articles":[]},"previous":{"title":"Welcome","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-api/tapir-overview.md","mtime":"2017-01-19T14:54:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-23T12:27:57.194Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tapir API","excerpt":"What is Tapir?","level":"1.2","depth":1,"next":{"title":"Getting Started with Tapir","level":"1.2.1","depth":2,"path":"tapir-api/getting-started.md","ref":"./tapir-api/getting-started.md","articles":[]},"previous":{"title":"Welcome","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-api/tapir-overview.md","mtime":"2017-01-19T14:54:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-23T14:24:33.457Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

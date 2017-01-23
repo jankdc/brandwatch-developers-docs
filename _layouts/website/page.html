@@ -1,7 +1,23 @@
 {% extends template.self %}
 
+                {% block book_inner %}
+                    {% include "website/header.html" %}
+
+                    <div class="page-wrapper" role="main">
+                        <div class="page-inner">
+                            {% block search_results %}
+                                <section class="normal markdown-section">
+                                {% block page %}
+                                {{ page.content|safe }}
+                                {% endblock %}
+                                </section>
+                            {% endblock %}
+                        </div>
+                    </div>
+                {% endblock %}
+
 {% block body %}
-<div id="bw-page">
+<div id="bw-page" tabindex="-1">
   <header id="bw-header">
     <h1><a href="./">Brandwatch Developers</a></h1>
     <div class="links">
@@ -13,3 +29,6 @@
   {{ super() }}
 </div>
 {% endblock %}
+
+
+
