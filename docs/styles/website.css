@@ -122,10 +122,26 @@ header#bw-header a:hover {
 }
 .book-summary {
   flex: 0 0 300px;
+  background-color: #eceef1;
 }
 .book-body {
   flex: 1;
 }
+.book-body .body-inner {
+  background-color: #f8f9fa;
+  padding-bottom: 7em;
+}
 #book-search-input {
   border-top: none;
+}
+
+.markdown-section blockquote {
+  box-shadow: 0 1px 3px 0 rgba(192,199,209,.75);
+  background-color: #eef5f7;
+  border-left: 4px solid #5bc0de;
+  padding: 15px 15px 1px;
+}
+.markdown-section pre {
+  box-shadow: 0 1px 3px 0 rgba(192,199,209,.75);
+  background-color: #fff;
 }
