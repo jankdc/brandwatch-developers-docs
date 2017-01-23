@@ -73,6 +73,7 @@ header#bw-header h1 {
   line-height: 30px;
   margin-left: 30px;
   flex: 2 1 300px;
+  min-width: 300px;
 }
 header#bw-header h1 a {
   opacity: 0;
