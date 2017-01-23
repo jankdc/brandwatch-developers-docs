@@ -2,7 +2,7 @@
   "name": "brandwatch-developers-docs",
   "version": "1.0.0",
   "description": "Brandwatch Developers documentation, ported from readme.io",
-  "main": "gitbook serve",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -11,7 +11,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "gitbook serve"
+    "test": "gitbook serve",
+    "build": "rm -r docs && gitbook build && mv _book docs"
   },
   "author": "",
   "license": "ISC"
