@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Getting Started with Tapir · GitBook</title>
+        <title>destination-big-number · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="package-json.html" />
+    <link rel="next" href="destination-chart.html" />
     
     
-    <link rel="prev" href="tapir-overview.html" />
+    <link rel="prev" href="source-brandwatch-data.html" />
     
 
     </head>
@@ -118,9 +118,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="tapir-overview.html">
+        <li class="chapter " data-level="1.2" data-path="../tapir-api/tapir-overview.html">
             
-                <a href="tapir-overview.html">
+                <a href="../tapir-api/tapir-overview.html">
             
                     
                     Tapir API
@@ -132,9 +132,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="getting-started.html">
+        <li class="chapter " data-level="1.2.1" data-path="../tapir-api/getting-started.html">
             
-                <a href="getting-started.html">
+                <a href="../tapir-api/getting-started.html">
             
                     
                     Getting Started with Tapir
@@ -145,9 +145,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="package-json.html">
+        <li class="chapter " data-level="1.2.2" data-path="../tapir-api/package-json.html">
             
-                <a href="package-json.html">
+                <a href="../tapir-api/package-json.html">
             
                     
                     Example package.json
@@ -158,9 +158,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="manifest-json.html">
+        <li class="chapter " data-level="1.2.3" data-path="../tapir-api/manifest-json.html">
             
-                <a href="manifest-json.html">
+                <a href="../tapir-api/manifest-json.html">
             
                     
                     The manifest.json file
@@ -273,9 +273,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../tapir-modules/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../tapir-modules/">
+                <a href="./">
             
                     
                     Tapir Modules
@@ -287,9 +287,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../tapir-modules/source-brandwatch-data.html">
+        <li class="chapter " data-level="1.4.1" data-path="source-brandwatch-data.html">
             
-                <a href="../tapir-modules/source-brandwatch-data.html">
+                <a href="source-brandwatch-data.html">
             
                     
                     source-brandwatch-data
@@ -300,9 +300,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../tapir-modules/destination-big-number.html">
+        <li class="chapter active" data-level="1.4.2" data-path="destination-big-number.html">
             
-                <a href="../tapir-modules/destination-big-number.html">
+                <a href="destination-big-number.html">
             
                     
                     destination-big-number
@@ -313,9 +313,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../tapir-modules/destination-chart.html">
+        <li class="chapter " data-level="1.4.3" data-path="destination-chart.html">
             
-                <a href="../tapir-modules/destination-chart.html">
+                <a href="destination-chart.html">
             
                     
                     destination-chart
@@ -326,9 +326,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../tapir-modules/destination-table.html">
+        <li class="chapter " data-level="1.4.4" data-path="destination-table.html">
             
-                <a href="../tapir-modules/destination-table.html">
+                <a href="destination-table.html">
             
                     
                     destination-table
@@ -374,7 +374,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Getting Started with Tapir</a>
+        <a href=".." >destination-big-number</a>
     </h1>
 </div>
 
@@ -386,32 +386,43 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <p>Install tapir via npm</p>
-<pre><code class="lang-shell">npm install --save vizia/tapir#v3.x
-</code></pre>
-<p>Make a simple bundle</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> tapir = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vizia/tapir&apos;</span>)
-<span class="hljs-keyword">const</span> log = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vizia/tapir/destinations/log&apos;</span>)
+                                <h1 id="destination-big-number">destination-big-number</h1>
+<h3 id="npm-run-script"><code>npm run-script</code></h3>
+<p>Running the above command will output the following information about the scripts availiable:</p>
+<pre><code>Lifecycle scripts included in destination-big-number:
+  test
+    covert cli-test.js
 
-<span class="hljs-keyword">const</span> bundle = tapir()
-
-<span class="hljs-keyword">const</span> people = [
-  {
-    name: <span class="hljs-string">&apos;donny&apos;</span>
-  },
-  {
-    name: <span class="hljs-string">&apos;donson&apos;</span>
-  }
-]
-
-bundle.source(people)
-
-bundle.use(person =&gt; person.name)
-
-bundle.use(log)
-
-<span class="hljs-built_in">module</span>.exports = bundle
-</code></pre>
+available via `npm run-script`:
+  lint
+    eslint .
+  ci
+    npm run lint &amp;&amp; npm run test
+  demo
+    wzrd demo.js
+  browser-test
+    wzrd test.js
+</code></pre><h4 id="npm-test"><code>npm test</code></h4>
+<p>This runs the CLI test via covert so will fail if code coverage is not 100%.</p>
+<h4 id="npm-run-lint"><code>npm run lint</code></h4>
+<p>This runs eslint on the entire directory.</p>
+<h4 id="npm-run-ci"><code>npm run ci</code></h4>
+<p>This runs both the above command and is intended for use on our CI environment.</p>
+<h4 id="npm-run-demo"><code>npm run demo</code></h4>
+<p>This starts a server on localhost and serves the demo. default port is 9966.</p>
+<h4 id="npm-run-browser-test"><code>npm run browser-test</code></h4>
+<p>This starts a server on localhost and runs the tests without code coverages. It uses default tape output so open the console to see results.</p>
+<h2 id="data-format">Data Format</h2>
+<p>The destination can work in one of two ways:</p>
+<h3 id="number-only">Number only</h3>
+<p>Simply emit an Int value to have this number displayed in the destination. The change indicator will not be displayed.</p>
+<h3 id="change-indicator">Change indicator</h3>
+<p>Emit an object of format</p>
+<pre><code>{
+    value: currentValue,
+    change: percentageChange
+}
+</code></pre><p>This will display the number along with a change indicator showing how the number has changed.</p>
 
                                 
                                 </section>
@@ -429,7 +440,7 @@ bundle.use(log)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Getting Started with Tapir","excerpt":"This page will help you get started with Tapir. You'll be up and running in a jiffy!","level":"1.2.1","depth":2,"next":{"title":"Example package.json","level":"1.2.2","depth":2,"path":"tapir-api/package-json.md","ref":"./tapir-api/package-json.md","articles":[]},"previous":{"title":"Tapir API","level":"1.2","depth":1,"path":"tapir-api/tapir-overview.md","ref":"./tapir-api/tapir-overview.md","articles":[{"title":"Getting Started with Tapir","level":"1.2.1","depth":2,"path":"tapir-api/getting-started.md","ref":"./tapir-api/getting-started.md","articles":[]},{"title":"Example package.json","level":"1.2.2","depth":2,"path":"tapir-api/package-json.md","ref":"./tapir-api/package-json.md","articles":[]},{"title":"The manifest.json file","level":"1.2.3","depth":2,"path":"tapir-api/manifest-json.md","ref":"./tapir-api/manifest-json.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-api/getting-started.md","mtime":"2017-01-20T15:05:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-13T18:17:44.122Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"destination-big-number","level":"1.4.2","depth":2,"next":{"title":"destination-chart","level":"1.4.3","depth":2,"path":"tapir-modules/destination-chart.md","ref":"./tapir-modules/destination-chart.md","articles":[]},"previous":{"title":"source-brandwatch-data","level":"1.4.1","depth":2,"path":"tapir-modules/source-brandwatch-data.md","ref":"./tapir-modules/source-brandwatch-data.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-modules/destination-big-number.md","mtime":"2017-02-13T18:12:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-13T18:17:44.122Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Getting Started with Tapir · GitBook</title>
+        <title>destination-chart · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="package-json.html" />
+    <link rel="next" href="destination-table.html" />
     
     
-    <link rel="prev" href="tapir-overview.html" />
+    <link rel="prev" href="destination-big-number.html" />
     
 
     </head>
@@ -118,9 +118,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="tapir-overview.html">
+        <li class="chapter " data-level="1.2" data-path="../tapir-api/tapir-overview.html">
             
-                <a href="tapir-overview.html">
+                <a href="../tapir-api/tapir-overview.html">
             
                     
                     Tapir API
@@ -132,9 +132,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="getting-started.html">
+        <li class="chapter " data-level="1.2.1" data-path="../tapir-api/getting-started.html">
             
-                <a href="getting-started.html">
+                <a href="../tapir-api/getting-started.html">
             
                     
                     Getting Started with Tapir
@@ -145,9 +145,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="package-json.html">
+        <li class="chapter " data-level="1.2.2" data-path="../tapir-api/package-json.html">
             
-                <a href="package-json.html">
+                <a href="../tapir-api/package-json.html">
             
                     
                     Example package.json
@@ -158,9 +158,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="manifest-json.html">
+        <li class="chapter " data-level="1.2.3" data-path="../tapir-api/manifest-json.html">
             
-                <a href="manifest-json.html">
+                <a href="../tapir-api/manifest-json.html">
             
                     
                     The manifest.json file
@@ -273,9 +273,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../tapir-modules/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../tapir-modules/">
+                <a href="./">
             
                     
                     Tapir Modules
@@ -287,9 +287,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../tapir-modules/source-brandwatch-data.html">
+        <li class="chapter " data-level="1.4.1" data-path="source-brandwatch-data.html">
             
-                <a href="../tapir-modules/source-brandwatch-data.html">
+                <a href="source-brandwatch-data.html">
             
                     
                     source-brandwatch-data
@@ -300,9 +300,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../tapir-modules/destination-big-number.html">
+        <li class="chapter " data-level="1.4.2" data-path="destination-big-number.html">
             
-                <a href="../tapir-modules/destination-big-number.html">
+                <a href="destination-big-number.html">
             
                     
                     destination-big-number
@@ -313,9 +313,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../tapir-modules/destination-chart.html">
+        <li class="chapter active" data-level="1.4.3" data-path="destination-chart.html">
             
-                <a href="../tapir-modules/destination-chart.html">
+                <a href="destination-chart.html">
             
                     
                     destination-chart
@@ -326,9 +326,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../tapir-modules/destination-table.html">
+        <li class="chapter " data-level="1.4.4" data-path="destination-table.html">
             
-                <a href="../tapir-modules/destination-table.html">
+                <a href="destination-table.html">
             
                     
                     destination-table
@@ -374,7 +374,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Getting Started with Tapir</a>
+        <a href=".." >destination-chart</a>
     </h1>
 </div>
 
@@ -386,32 +386,22 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <p>Install tapir via npm</p>
-<pre><code class="lang-shell">npm install --save vizia/tapir#v3.x
-</code></pre>
-<p>Make a simple bundle</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> tapir = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vizia/tapir&apos;</span>)
-<span class="hljs-keyword">const</span> log = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vizia/tapir/destinations/log&apos;</span>)
-
-<span class="hljs-keyword">const</span> bundle = tapir()
-
-<span class="hljs-keyword">const</span> people = [
-  {
-    name: <span class="hljs-string">&apos;donny&apos;</span>
-  },
-  {
-    name: <span class="hljs-string">&apos;donson&apos;</span>
-  }
-]
-
-bundle.source(people)
-
-bundle.use(person =&gt; person.name)
-
-bundle.use(log)
-
-<span class="hljs-built_in">module</span>.exports = bundle
-</code></pre>
+                                <h1 id="destination-chart">destination-chart</h1>
+<p>A Vizia Tapir wrapped <a href="http://c3js.org/" target="_blank">C3 chart</a> able to render and update itself using streaming data</p>
+<h3 id="options">Options</h3>
+<p>ChartDestination is constructed with an options object with the following properties:</p>
+<ul>
+<li><code>destTarget</code> - <code>String</code> - selector for the destination DOM node</li>
+<li><code>onDataMethod</code> - <code>String | undefined</code> - defaults to <code>&apos;flow&apos;</code> - when set to <code>&apos;flow&apos;</code> data is fluidly appended to the chart over time and when set to <code>&apos;load&apos;</code> data is loaded into the chart in one go</li>
+<li><code>flowLimit</code> - <code>Number | undefined</code> - defaults to <code>10</code> - the max number of points in the chart domain that will be displayed</li>
+<li><code>showAverageLines</code> - <code>Boolean | undefined</code> - defaults to <code>false</code> - if set to true average lines will be displayed on the chart</li>
+<li><code>chart</code> - <code>Object | undefined</code> - defaults to <code>{}</code> - can be used to set and override config passed into the <a href="http://c3js.org/gettingstarted.html#generate" target="_blank">c3 generate call</a> which is used internally</li>
+<li><code>interpolationType</code> - <code>String | undefined</code> - if set (e.g. to <code>&apos;monotone&apos;</code>) then c3&apos;s default interpolation type is overridden (more info <a href="https://github.com/c3js/c3/issues/1608#issuecomment-195090796" target="_blank">here</a>)</li>
+</ul>
+<h3 id="source">Source</h3>
+<p>The chart expects an object stream. The format of emitted data events depends on the <code>chart.data.type</code> specified at construction time (defaults to <a href="http://c3js.org/samples/chart_spline.html" target="_blank"><code>&apos;spline&apos;</code></a>). The different types are documented <a href="http://c3js.org/reference.html#data-type" target="_blank">here</a></p>
+<h2 id="examples">Examples</h2>
+<p>See the <a href="https://github.com/vizia/destination-chart/tree/master/demo" target="_blank">demo</a> directory in the root of this repo for examples of what can be achieved with this destination</p>
 
                                 
                                 </section>
@@ -429,7 +419,7 @@ bundle.use(log)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Getting Started with Tapir","excerpt":"This page will help you get started with Tapir. You'll be up and running in a jiffy!","level":"1.2.1","depth":2,"next":{"title":"Example package.json","level":"1.2.2","depth":2,"path":"tapir-api/package-json.md","ref":"./tapir-api/package-json.md","articles":[]},"previous":{"title":"Tapir API","level":"1.2","depth":1,"path":"tapir-api/tapir-overview.md","ref":"./tapir-api/tapir-overview.md","articles":[{"title":"Getting Started with Tapir","level":"1.2.1","depth":2,"path":"tapir-api/getting-started.md","ref":"./tapir-api/getting-started.md","articles":[]},{"title":"Example package.json","level":"1.2.2","depth":2,"path":"tapir-api/package-json.md","ref":"./tapir-api/package-json.md","articles":[]},{"title":"The manifest.json file","level":"1.2.3","depth":2,"path":"tapir-api/manifest-json.md","ref":"./tapir-api/manifest-json.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-api/getting-started.md","mtime":"2017-01-20T15:05:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-13T18:17:44.122Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"destination-chart","level":"1.4.3","depth":2,"next":{"title":"destination-table","level":"1.4.4","depth":2,"path":"tapir-modules/destination-table.md","ref":"./tapir-modules/destination-table.md","articles":[]},"previous":{"title":"destination-big-number","level":"1.4.2","depth":2,"path":"tapir-modules/destination-big-number.md","ref":"./tapir-modules/destination-big-number.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-modules/destination-chart.md","mtime":"2017-02-13T18:12:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-13T18:17:44.122Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
