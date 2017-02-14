@@ -10,4 +10,9 @@
     * [Putting the Pieces Together](./tapir-tutorial/5-putting-the-pieces-together.md)
     * [Testing a Complete Bundle](./tapir-tutorial/6-testing-a-complete-bundle.md)
     * [Reusing Code](./tapir-tutorial/7-reusing-code-to-make-a-second-bundle.md)
+* [Tapir Modules](./tapir-modules/README.md)
+    * [source-brandwatch-data](./tapir-modules/source-brandwatch-data.md)
+    * [destination-big-number](./tapir-modules/destination-big-number.md)
+    * [destination-chart](./tapir-modules/destination-chart.md)
+    * [destination-table](./tapir-modules/destination-table.md)
 
