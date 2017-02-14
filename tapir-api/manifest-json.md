@@ -20,15 +20,15 @@ The location of your built and runnable bundle code. Usually this file will be i
 
 ## auths : `array` of `object`s
 An auth token or tokens needed to run the bundle.
-   ### provider : `string`
+### `auths.`provider : `string`
    The name of the token provider, e.g. `"salesforce"`.
-   ### clientId : `string`
+### `auths.`clientId : `string`
    An ID that identifies the user to this authentication provider.
-   ### clientSecret : `string`
+### `auths.`clientSecret : `string`
    The password, API key, or other authentication mechanism that verifies this user's identity.
-   ### scopes : `array`
+### `auths.`scopes : `array`
    Strings representing the various scopes for which this auth token should be used. 
-   ### tokenTTLSeconds : `integer`
+### `auths.`tokenTTLSeconds : `integer`
    The number of seconds the token remains active.
 
 ## browserScripts : `array` (required)
@@ -42,16 +42,16 @@ The optional bundle name. If supplied, this should match the name used in the pa
 
 ## optionViewConfig : `array` of `object`s
 The option views that will be rendered for user input of bundle settings, in the order provided.
-   ### name : `string`  
+### `optionViewConfig.`name : `string`  
    The name of the option view to render. This can be the filename of any of the [existing option views](https://github.com/BrandwatchLtd/vizia/tree/master/admin2/public/js/views/optionviews) without the `.js` file extension or path. 
-   ### settings : `object`  
+### `optionViewConfig.`settings : `object`  
    Additional properties currently only required for the `generateCustomComponentOptionsView` option view.
-      #### allowedValues : `array` of `string`s  
+#### `optionViewConfig.settings.`allowedValues : `array` of `string`s  
       The options to show in a `select` dropdown. The value supplied will function as both label and value.
-      #### label : `string`  
+#### `optionViewConfig.settings.`label : `string`  
       The label for the input field that should be displayed to the user.
-      #### inputType : `string`  
+#### `optionViewConfig.settings.`inputType : `string`  
       One of the standard HTML input types, such as `text` or `date`. This can also be used to generate custom non-input types, which are: `select`, `googleAnalyticsViewID`, `location`, and `weatherUnits`.
-      #### paramName : `string`  
+#### `optionViewConfig.settings.`paramName : `string`  
       What property name should be used to reference the user's input when it's made available to the bundle on the `config.scene.options` object.
 
