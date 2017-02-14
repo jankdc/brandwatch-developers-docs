@@ -22,7 +22,11 @@ For your first bundle, it may be easier to start by adding a `package.json` file
     "wzrd": "^1.5.0"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@vizia/tapir": "github:vizia/tapir#v3.x",
+=======
+    "@vizia/tapir": "github:vizia/tapir",
+>>>>>>> master
     "browserify-css": "^0.9.2",
     "handlebars": "^4.0.6",
     "hbsfy": "^2.7.0",
