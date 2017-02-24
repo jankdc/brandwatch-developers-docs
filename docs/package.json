@@ -12,7 +12,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "gitbook serve",
-    "build": "rm -r docs && gitbook build && mv _book docs"
+    "build": "rm -r docs && gitbook build && mv _book docs && mv docs/index.html docs/readme.html && mv docs/LANDING.html docs/index.html"
   },
   "author": "",
   "license": "ISC"

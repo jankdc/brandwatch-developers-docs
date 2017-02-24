@@ -3,6 +3,8 @@
 * [Welcome](README.md)
 * [Tapir API](./tapir-api/tapir-overview.md)
     * [Getting Started with Tapir](./tapir-api/getting-started.md)
+    * [Example package.json](./tapir-api/package-json.md)
+    * [The manifest.json file](./tapir-api/manifest-json.md)
 * [Tapir Tutorial](./tapir-tutorial/1-introduction.md)
     * [Creating a Source](./tapir-tutorial/2-creating-a-source.md)
     * [Creating a Destination](./tapir-tutorial/3-creating-a-destination.md)

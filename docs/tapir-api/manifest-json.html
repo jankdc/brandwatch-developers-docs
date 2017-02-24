@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Getting Started with Tapir · GitBook</title>
+        <title>The manifest.json file · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="package-json.html" />
+    <link rel="next" href="../tapir-tutorial/1-introduction.html" />
     
     
-    <link rel="prev" href="tapir-overview.html" />
+    <link rel="prev" href="package-json.html" />
     
 
     </head>
@@ -132,7 +132,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="getting-started.html">
+        <li class="chapter " data-level="1.2.1" data-path="getting-started.html">
             
                 <a href="getting-started.html">
             
@@ -158,7 +158,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="manifest-json.html">
+        <li class="chapter active" data-level="1.2.3" data-path="manifest-json.html">
             
                 <a href="manifest-json.html">
             
@@ -374,7 +374,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Getting Started with Tapir</a>
+        <a href=".." >The manifest.json file</a>
     </h1>
 </div>
 
@@ -386,33 +386,48 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <p>Install tapir via npm</p>
-<pre><code class="lang-shell">npm install --save vizia/tapir#v3.x
+                                <p>To demo a bundle in a local environment, you typically don&apos;t need to do more than run it. However, you&apos;ll eventually want to create bundles for use in Vizia. Your bundle will be added to Vizia via its <code>manifest.json</code> file. Vizia will examine that manifest to see where your runnable bundle code is, as well as any additional information you&apos;ve supplied. </p>
+<p>A basic <code>manifest.json</code> can be very simple:</p>
+<pre><code>{
+    &quot;browserScripts&quot;: [],
+    &quot;app&quot;: &quot;your-new-bundle/bundle.js&quot;
+}
+</code></pre><p>The following parameters may be used in <code>manifest.json</code>, in any order:</p>
+<h2 id="app--string-required">app : <code>string</code> (required)</h2>
+<p>The location of your built and runnable bundle code. Usually this file will be in the top level of your bundle&apos;s directory, so the complete string will take the form <code>your-bundle-name/bundle.js</code> or similar. the path is short because your bundle is either copied or linked to a directory within Vizia, so all other path information is set elsewhere.</p>
+<h2 id="auths--array-of-objects">auths : <code>array</code> of <code>object</code>s</h2>
+<p>An auth token or tokens needed to run the bundle.</p>
+<h3 id="authsprovider--string"><code>auths.</code>provider : <code>string</code></h3>
+<p>   The name of the token provider, e.g. <code>&quot;salesforce&quot;</code>.</p>
+<h3 id="authsclientid--string"><code>auths.</code>clientId : <code>string</code></h3>
+<p>   An ID that identifies the user to this authentication provider.</p>
+<h3 id="authsclientsecret--string"><code>auths.</code>clientSecret : <code>string</code></h3>
+<p>   The password, API key, or other authentication mechanism that verifies this user&apos;s identity.</p>
+<h3 id="authsscopes--array"><code>auths.</code>scopes : <code>array</code></h3>
+<p>   Strings representing the various scopes for which this auth token should be used. </p>
+<h3 id="authstokenttlseconds--integer"><code>auths.</code>tokenTTLSeconds : <code>integer</code></h3>
+<p>   The number of seconds the token remains active.</p>
+<h2 id="browserscripts--array-required">browserScripts : <code>array</code> (required)</h2>
+<p>Full paths to scripts to be included on the rendered page, as strings. These can be local files or scripts stored on a CDN.</p>
+<h2 id="config--object">config : <code>object</code></h2>
+<p>Key/value pairs to be added to the bundle&apos;s config object, as though the <code>set</code> method had been used.</p>
+<h2 id="name--string">name : <code>string</code></h2>
+<p>The optional bundle name. If supplied, this should match the name used in the path of the <code>app</code> property.</p>
+<h2 id="optionviewconfig--array-of-objects">optionViewConfig : <code>array</code> of <code>object</code>s</h2>
+<p>The option views that will be rendered for user input of bundle settings, in the order provided.</p>
+<h3 id="optionviewconfigname--string"><code>optionViewConfig.</code>name : <code>string</code></h3>
+<p>   The name of the option view to render. This can be the filename of any of the <a href="https://github.com/BrandwatchLtd/vizia/tree/master/admin2/public/js/views/optionviews" target="_blank">existing option views</a> without the <code>.js</code> file extension or path. </p>
+<h3 id="optionviewconfigsettings--object"><code>optionViewConfig.</code>settings : <code>object</code></h3>
+<p>   Additional properties currently only required for the <code>generateCustomComponentOptionsView</code> option view.</p>
+<h4 id="optionviewconfigsettingsallowedvalues--array-of-strings"><code>optionViewConfig.settings.</code>allowedValues : <code>array</code> of <code>string</code>s</h4>
+<pre><code>  The options to show in a `select` dropdown. The value supplied will function as both label and value.
+</code></pre><h4 id="optionviewconfigsettingslabel--string"><code>optionViewConfig.settings.</code>label : <code>string</code></h4>
+<pre><code>  The label for the input field that should be displayed to the user.
+</code></pre><h4 id="optionviewconfigsettingsinputtype--string"><code>optionViewConfig.settings.</code>inputType : <code>string</code></h4>
+<pre><code>  One of the standard HTML input types, such as `text` or `date`. This can also be used to generate custom non-input types, which are: `select`, `googleAnalyticsViewID`, `location`, and `weatherUnits`.
+</code></pre><h4 id="optionviewconfigsettingsparamname--string"><code>optionViewConfig.settings.</code>paramName : <code>string</code></h4>
+<pre><code>  What property name should be used to reference the user&apos;s input when it&apos;s made available to the bundle on the `config.scene.options` object.
 </code></pre>
-<p>Make a simple bundle</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> tapir = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vizia/tapir&apos;</span>)
-<span class="hljs-keyword">const</span> log = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vizia/tapir/destinations/log&apos;</span>)
-
-<span class="hljs-keyword">const</span> bundle = tapir()
-
-<span class="hljs-keyword">const</span> people = [
-  {
-    name: <span class="hljs-string">&apos;donny&apos;</span>
-  },
-  {
-    name: <span class="hljs-string">&apos;donson&apos;</span>
-  }
-]
-
-bundle.source(people)
-
-bundle.use(person =&gt; person.name)
-
-bundle.use(log)
-
-<span class="hljs-built_in">module</span>.exports = bundle
-</code></pre>
-
                                 
                                 </section>
                             
@@ -429,7 +444,7 @@ bundle.use(log)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Getting Started with Tapir","excerpt":"This page will help you get started with Tapir. You'll be up and running in a jiffy!","level":"1.2.1","depth":2,"next":{"title":"Example package.json","level":"1.2.2","depth":2,"path":"tapir-api/package-json.md","ref":"./tapir-api/package-json.md","articles":[]},"previous":{"title":"Tapir API","level":"1.2","depth":1,"path":"tapir-api/tapir-overview.md","ref":"./tapir-api/tapir-overview.md","articles":[{"title":"Getting Started with Tapir","level":"1.2.1","depth":2,"path":"tapir-api/getting-started.md","ref":"./tapir-api/getting-started.md","articles":[]},{"title":"Example package.json","level":"1.2.2","depth":2,"path":"tapir-api/package-json.md","ref":"./tapir-api/package-json.md","articles":[]},{"title":"The manifest.json file","level":"1.2.3","depth":2,"path":"tapir-api/manifest-json.md","ref":"./tapir-api/manifest-json.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-api/getting-started.md","mtime":"2017-01-20T15:05:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-14T14:08:15.599Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"The manifest.json file","excerpt":"","level":"1.2.3","depth":2,"next":{"title":"Tapir Tutorial","level":"1.3","depth":1,"path":"tapir-tutorial/1-introduction.md","ref":"./tapir-tutorial/1-introduction.md","articles":[{"title":"Creating a Source","level":"1.3.1","depth":2,"path":"tapir-tutorial/2-creating-a-source.md","ref":"./tapir-tutorial/2-creating-a-source.md","articles":[]},{"title":"Creating a Destination","level":"1.3.2","depth":2,"path":"tapir-tutorial/3-creating-a-destination.md","ref":"./tapir-tutorial/3-creating-a-destination.md","articles":[]},{"title":"Transforming our Data","level":"1.3.3","depth":2,"path":"tapir-tutorial/4-transforming-our-data.md","ref":"./tapir-tutorial/4-transforming-our-data.md","articles":[]},{"title":"Putting the Pieces Together","level":"1.3.4","depth":2,"path":"tapir-tutorial/5-putting-the-pieces-together.md","ref":"./tapir-tutorial/5-putting-the-pieces-together.md","articles":[]},{"title":"Testing a Complete Bundle","level":"1.3.5","depth":2,"path":"tapir-tutorial/6-testing-a-complete-bundle.md","ref":"./tapir-tutorial/6-testing-a-complete-bundle.md","articles":[]},{"title":"Reusing Code","level":"1.3.6","depth":2,"path":"tapir-tutorial/7-reusing-code-to-make-a-second-bundle.md","ref":"./tapir-tutorial/7-reusing-code-to-make-a-second-bundle.md","articles":[]}]},"previous":{"title":"Example package.json","level":"1.2.2","depth":2,"path":"tapir-api/package-json.md","ref":"./tapir-api/package-json.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-api/manifest-json.md","mtime":"2017-02-14T14:17:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-14T14:18:28.757Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
