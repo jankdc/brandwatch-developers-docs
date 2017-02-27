@@ -137,8 +137,10 @@ header#bw-header a:hover {
 .book-body .body-inner {
   padding-bottom: 7em;
 }
+/* temporary: hide the search box */
 #book-search-input {
   border-top-color: #fff;
+  display: none;
 }
 
 .markdown-section blockquote {
