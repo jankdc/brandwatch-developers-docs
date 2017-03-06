@@ -187,4 +187,7 @@ Displays a textbox to enter the URL of a video. Returns the path as `url`.
 Displays radio buttons allowing the user to select Celsius or Fahrenheit as temperature display units. Returns the selection as `units`.
 
 ## generateCustomComponentOptionsView
-An interface to **GenericCustomComponentOptionsView**.
+An interface to **GenericCustomComponentOptionsView**, adding the ability to use custom component controls.
+
+## /customcomponents
+These controls shouldn't be used directly, although they can be used via **generateCustomComponentOptionsView** by giving one of them as the `inputType`.
