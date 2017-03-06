@@ -17,4 +17,6 @@
     * [destination-big-number](./tapir-modules/destination-big-number.md)
     * [destination-chart](./tapir-modules/destination-chart.md)
     * [destination-table](./tapir-modules/destination-table.md)
+* [Integrating with Vizia](./integrating-with-vizia/README.md)
+    * [Option Views index](./integrating-with-vizia/option-views.md)
 
