@@ -11,4 +11,5 @@ We will create:
 We will discuss how best to architect an app with an eye on code reuse, as well as how to create unit and integration tests for your apps.
 
 
-If you want to follow along or view the finished code, you can clone the tutorial repo at [https://github.com/vizia/monzo-tapir](https://github.com/vizia/monzo-tapir)
+If you want to follow along or view the finished code, you can clone the tutorial repo at [https://github.com/vizia/monzo-tapir](https://github.com/vizia/monzo-tapir). *Note that you'll need to contact
+your account manager in order to access this and the other Vizia framework repositories.*
