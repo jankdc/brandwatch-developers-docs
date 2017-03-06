@@ -436,7 +436,7 @@
 <h2 id="combinedquerycontrolsnolocationfiltersoptionsview">CombinedQueryControlsNoLocationFiltersOptionsView</h2>
 <p>The same as <strong>CombinedQueryControlsOptionsView</strong>, but without the location filters.</p>
 <h2 id="combinedquerycontrolsoptionsview">CombinedQueryControlsOptionsView</h2>
-<p>The same as <strong>MinimalControlsOptionsView</strong>, with the addition of two more inputs: <code>combinedQueryInputs</code> and <code>dateInputs</code>.</p>
+<p>Implements <strong>MinimalControlsOptionsView</strong>, and shows <code>combinedQueryInputs</code> and <code>dateInputs</code>.</p>
 <h2 id="comparewithpreviousdaysoptionsview">CompareWithPreviousDaysOptionsView</h2>
 <p>Displays a field allowing the user to enter a number of days prior to the chosen date range to compare with. Returns the number as <code>daysPriorToDateRange</code>.</p>
 <h2 id="csvfileoptionsview">CsvFileOptionsView</h2>
@@ -447,6 +447,8 @@
 <p>Displays a custom form input based on supplied config parameters <code>label</code>, <code>inputType</code>, <code>paramName</code>, and <code>required</code>. Returns the value entered as <code>[paramName]</code>.</p>
 <h2 id="geocoderoptionsview">GeocoderOptionsView</h2>
 <p>Displays controls to enter a location or its coordinates. Returns <code>geocoderOptions</code> containing <code>location</code> and <code>coordinates</code>.</p>
+<h2 id="globescenescontrolsoptionsview">GlobeScenesControlsOptionsView</h2>
+<p>Implements <strong>MinimalControlsOptionsView</strong>, and shows only <code>combinedQueryInputs</code>.</p>
 <h2 id="globetypeoptionsview">GlobeTypeOptionsView</h2>
 <p>Displays radio buttons allowing the user to choose between a textured or flat globe. Returns their choice as <code>globeType</code>.</p>
 <h2 id="googleanalyticsviewidoptionsview">GoogleAnalyticsViewIdOptionsView</h2>
@@ -474,7 +476,7 @@
 <h2 id="mentionsviewersorttypeoptionsview">MentionsViewerSortTypeOptionsView</h2>
 <p>Displays a dropdown of data to sort by with the options &quot;Most Recent Tweets&quot;, &quot;Most Recent&quot;, &quot;High Influence People&quot;, &quot;Most Popular Tweets&quot;, and &quot;Most Recent Instagram Posts&quot;. Returns the selection as <code>orderBy</code>.</p>
 <h2 id="minimalcontrolsoptionsview">MinimalControlsOptionsView</h2>
-<p>Displays the standard Brandwatch data selection form with Data or Groups, Date range, and Filters. Returns those as <code>queryId</code> or <code>queryGroupId</code>; <code>startDate</code>, <code>endDate</code>, and <code>rollingDateRangeValue</code>; and <code>filter</code>, which may contain:</p>
+<p>A unified base control <em>that cannot be used directly</em> that displays the standard Brandwatch data selection form with Data or Groups, Date range, and Filters. Returns those as <code>queryId</code> or <code>queryGroupId</code>; <code>startDate</code>, <code>endDate</code>, and <code>rollingDateRangeValue</code>; and <code>filter</code>, which may contain:</p>
 <ul>
 <li><code>showHelp</code></li>
 <li><code>queryGroups</code></li>
@@ -497,11 +499,11 @@
 <li><code>queryColourOptions</code></li>
 </ul>
 <h2 id="nodatecontrolsoptionsview">NoDateControlsOptionsView</h2>
-<p>The same as <strong>MinimalControlsOptionsView</strong>, with the date controls removed.</p>
+<p>Implements <strong>MinimalControlsOptionsView</strong>, with the date controls removed.</p>
 <h2 id="projectselectionview">ProjectSelectionView</h2>
 <p>Displays a dropdown of the projects available to this user. Returns their selection as <code>projectId</code>.</p>
 <h2 id="querycontrolsoptionsview">QueryControlsOptionsView</h2>
-<p>The same as <strong>MinimalControlsOptionsView</strong>, with the addition of query selection controls.</p>
+<p>Implements <strong>MinimalControlsOptionsView</strong>, and shows only <code>queryInputs</code>.</p>
 <h2 id="queryselectionview">QuerySelectionView</h2>
 <p>Displays a dropdown allowing the user to select a query associated with the selected project. Returns the selection as <code>queryId</code>.</p>
 <h2 id="replayanimationoptionsview">ReplayAnimationOptionsView</h2>
@@ -522,6 +524,8 @@
 <p>Displays a textbox where the user can provide a label for a chart&apos;s Y-axis. Returns the result as <code>yAxisTitle</code>.</p>
 <h2 id="sentimentchartnameoptionsview">SentimentChartNameOptionsView</h2>
 <p>Displays a textbox to enter the subtitle of a sentiment chart within the tile. Returns a string as <code>name</code>.</p>
+<h2 id="shareofvoicecontrolsoptionsview">ShareOfVoiceControlsOptionsView</h2>
+<p>Implements <strong>MinimalControlsOptionsView</strong>, and shows <code>combinedQueryInputs</code> and <code>dateInputs</code>.</p>
 <h2 id="showneutraloptionsview">ShowNeutralOptionsView</h2>
 <p>Displays a checkbox to indicate whether to show neutral sentiment data. Returns a boolean as <code>showNeutral</code>.</p>
 <h2 id="showpercentagesoptionsview">ShowPercentagesOptionsView</h2>
@@ -561,7 +565,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Option Views index","excerpt":"Index of option views you can use to allow users to configure your bundle.","level":"1.5.1","depth":2,"previous":{"title":"Integrating with Vizia","level":"1.5","depth":1,"path":"integrating-with-vizia/README.md","ref":"./integrating-with-vizia/README.md","articles":[{"title":"Option Views index","level":"1.5.1","depth":2,"path":"integrating-with-vizia/option-views.md","ref":"./integrating-with-vizia/option-views.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"integrating-with-vizia/option-views.md","mtime":"2017-03-06T11:56:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-06T11:57:57.473Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Option Views index","excerpt":"Index of option views you can use to allow users to configure your bundle.","level":"1.5.1","depth":2,"previous":{"title":"Integrating with Vizia","level":"1.5","depth":1,"path":"integrating-with-vizia/README.md","ref":"./integrating-with-vizia/README.md","articles":[{"title":"Option Views index","level":"1.5.1","depth":2,"path":"integrating-with-vizia/option-views.md","ref":"./integrating-with-vizia/option-views.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"integrating-with-vizia/option-views.md","mtime":"2017-03-06T13:36:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-06T13:36:19.642Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

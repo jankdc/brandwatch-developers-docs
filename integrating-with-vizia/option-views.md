@@ -33,7 +33,7 @@ The same as **CombinedQueryControlsOptionsView**, but without the category filte
 The same as **CombinedQueryControlsOptionsView**, but without the location filters.
 
 ## CombinedQueryControlsOptionsView
-The same as **MinimalControlsOptionsView**, with the addition of two more inputs: `combinedQueryInputs` and `dateInputs`.
+Implements **MinimalControlsOptionsView**, and shows `combinedQueryInputs` and `dateInputs`.
 
 ## CompareWithPreviousDaysOptionsView
 Displays a field allowing the user to enter a number of days prior to the chosen date range to compare with. Returns the number as `daysPriorToDateRange`.
@@ -49,6 +49,9 @@ Displays a custom form input based on supplied config parameters `label`, `input
 
 ## GeocoderOptionsView
 Displays controls to enter a location or its coordinates. Returns `geocoderOptions` containing `location` and `coordinates`.
+
+## GlobeScenesControlsOptionsView
+Implements **MinimalControlsOptionsView**, and shows only `combinedQueryInputs`.
 
 ## GlobeTypeOptionsView
 Displays radio buttons allowing the user to choose between a textured or flat globe. Returns their choice as `globeType`.
@@ -90,7 +93,7 @@ Displays a drpdown to allow the user to choose between dark and light map styles
 Displays a dropdown of data to sort by with the options "Most Recent Tweets", "Most Recent", "High Influence People", "Most Popular Tweets", and "Most Recent Instagram Posts". Returns the selection as `orderBy`.
 
 ## MinimalControlsOptionsView
-Displays the standard Brandwatch data selection form with Data or Groups, Date range, and Filters. Returns those as `queryId` or `queryGroupId`; `startDate`, `endDate`, and `rollingDateRangeValue`; and `filter`, which may contain:
+A unified base control _that cannot be used directly_ that displays the standard Brandwatch data selection form with Data or Groups, Date range, and Filters. Returns those as `queryId` or `queryGroupId`; `startDate`, `endDate`, and `rollingDateRangeValue`; and `filter`, which may contain:
 - `showHelp`
 - `queryGroups`
 - `queries`
@@ -112,13 +115,13 @@ Displays the standard Brandwatch data selection form with Data or Groups, Date r
 - `queryColourOptions`
 
 ## NoDateControlsOptionsView
-The same as **MinimalControlsOptionsView**, with the date controls removed.
+Implements **MinimalControlsOptionsView**, with the date controls removed.
 
 ## ProjectSelectionView
 Displays a dropdown of the projects available to this user. Returns their selection as `projectId`.
 
 ## QueryControlsOptionsView
-The same as **MinimalControlsOptionsView**, with the addition of query selection controls.
+Implements **MinimalControlsOptionsView**, and shows only `queryInputs`.
 
 ## QuerySelectionView
 Displays a dropdown allowing the user to select a query associated with the selected project. Returns the selection as `queryId`.
@@ -149,6 +152,9 @@ Displays a textbox where the user can provide a label for a chart's Y-axis. Retu
 
 ## SentimentChartNameOptionsView
 Displays a textbox to enter the subtitle of a sentiment chart within the tile. Returns a string as `name`.
+
+## ShareOfVoiceControlsOptionsView
+Implements **MinimalControlsOptionsView**, and shows `combinedQueryInputs` and `dateInputs`.
 
 ## ShowNeutralOptionsView
 Displays a checkbox to indicate whether to show neutral sentiment data. Returns a boolean as `showNeutral`.
