@@ -9,7 +9,9 @@
   "dependencies": {
     "gitbook-plugin-theme-api": "^1.1.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gitbook-cli": "^2.3.0"
+  },
   "scripts": {
     "test": "gitbook serve",
     "build": "rm -r docs && gitbook build && mv _book docs && mv docs/index.html docs/readme.html && mv docs/LANDING.html docs/index.html"
