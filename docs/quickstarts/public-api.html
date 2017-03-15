@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Integrating with Vizia · GitBook</title>
+        <title>Consuming a public API · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -63,10 +63,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="option-views.html" />
+    <link rel="next" href="../tapir-tutorial/1-introduction.html" />
     
-    
-    <link rel="prev" href="../tapir-modules/destination-table.html" />
     
 
     </head>
@@ -190,9 +188,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../quickstarts/public-api.html">
+        <li class="chapter active" data-level="1.3.1" data-path="public-api.html">
             
-                <a href="../quickstarts/public-api.html">
+                <a href="public-api.html">
             
                     
                     Consuming a public API
@@ -376,9 +374,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../integrating-with-vizia/">
             
-                <a href="./">
+                <a href="../integrating-with-vizia/">
             
                     
                     Integrating with Vizia
@@ -390,9 +388,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="option-views.html">
+        <li class="chapter " data-level="1.6.1" data-path="../integrating-with-vizia/option-views.html">
             
-                <a href="option-views.html">
+                <a href="../integrating-with-vizia/option-views.html">
             
                     
                     Option Views index
@@ -438,7 +436,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Integrating with Vizia</a>
+        <a href=".." >Consuming a public API</a>
     </h1>
 </div>
 
@@ -450,9 +448,58 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <p>Eventually, you will want to add your bundle to Vizia. To do that, you&apos;ll need two files at minimum: the built JavaScript output when you run <a href="../tapi-api/package-json.html"><code>npm run build</code></a>, and <a href="../tapir-api/manifest-json.html">your <code>manifest.json</code> file</a>. A Vizia engineer can take those and add them to the Vizia platform, after which you and others in your organization will have access to a new scene or tile that implements the bundle you created.</p>
-<p>That means that, in terms of integration, there isn&apos;t much to think about. One thing not covered by your bundle code that may be important, though, are the user options for display. These are the settings on the left-hand side of the preview when you add a scene or tile to your display in Vizia. Some bundles will not require any configuration for use, but others, particularly those using Brandwatch data, will need some additional input to run. Vizia contains a library of these <a href="option-views.html">option views</a>, which you can add by simply naming them in your <code>manifest.json</code> file.</p>
-<p>If you need to replace your bundle in Vizia at any point, you can just send your built JavaScript file. You&apos;ll only need to send the <code>manifest.json</code> or any other assets (e.g. images) if they&apos;ve changed.</p>
+                                <p>To understand how to quickly build a bundle, it helps to have simple requirements. If the data your bundle will consume comes from a publicly-accessible API, API keys are one less thing you need to worry about. If a destination module already exists for the way you want to display your data, the only work you&apos;ll need to do is transforming the data into the format the destination requires.</p>
+<p>In this example we&apos;ll create a bundle that outputs its data the to <a href="https://github.com/vizia/destination-big-number" target="_blank">Big Number destination</a>, but the code you write can be the basis for any other destination you want to use in combination with a public API.</p>
+<p>To start, create a new directory for your module and add a <a href="../tapir-api/package-json.html">package.json</a> file. If you know all your dependencies, you can specify those in <code>package.json</code> and save time just running <code>npm install</code> to install everything at once. For this example, we&apos;ll need to add one more dependency not covered in the <code>package.json</code> linked above, so it&apos;s also necessary to run <code>npm install --save vizia/destination-big-number</code>.</p>
+<p>Now we can begin to write code in a new file, <code>bundle.js</code>.</p>
+<p>The first thing we&apos;ll add are our dependencies. Bundles are meant to be small files that pull in small modules they chain together to provide their logic. So the dependencies we define at the top are really a quick summary of what logic our bundle is going to perform. For our example, we&apos;ll need to use Tapir (which takes care of combining the bundle logic), a generic helper to <a href="https://github.com/vizia/tapir/tree/master/sources/json-http" target="_blank">get JSON from an XHR</a>, and the destination that will provide the display, <code>destination-big-number</code>.</p>
+<pre><code>var tapir = require(&quot;@vizia/tapir/bundle&quot;),
+    json = require(&quot;@vizia/tapir/sources/json-http&quot;),
+    bignumber = require(&quot;@vizia/destination-big-number&quot;);
+</code></pre><p>Next we can create an instance of a bundle. While we&apos;re at it, we may as well define a settings object to provide to our data source, too. Since it&apos;s passed in when the source is added to the bundle and not used by any other modules in our chain, it&apos;s fine to just declare it locally. If we wanted to pass it around, however, we could add it to the bundle&apos;s config object using <code>bundle.set</code>.</p>
+<pre><code>var bundle = tapir(),
+    sourceOptions = {
+        throttle: 60000
+    };
+</code></pre><p>Once all our variables are set up we can compose our chain. Calls to <code>bundle.use</code> are run in the order given, so data sources are always used first, and destinations are always used last. The <code>json-http</code> module handles creating the actual XHR for us, informed by the options we pass it, so the only other thing we need to supply is the URL of the API we want to call.</p>
+<pre><code>bundle.use(json(&quot;http://api.fixer.io/latest?base=USD&amp;symbols=GBP&quot;, sourceOptions));
+</code></pre><p>The API we passed in will provide us some information about the value of the British Pound against the US Dollar. We can&apos;t use it directly, though. First, we need to get the property containing the actual exchange rate from the JSON we&apos;ve been provided and return it with the correct key. Next, since <code>destination-big-number</code> is biased toward integers, we&apos;ll multiply by 100 to show the number of pence in a dollar instead of a decimal. This transformation is specific to this combination of API data and destination, so instead of getting it from a module we&apos;ll create it inline with a new function.</p>
+<pre><code>bundle.use(function getNumber(row) {
+    return {
+        value: (row.rates.GBP * 100)
+    };
+});
+</code></pre><p>Finally, we&apos;ll end our chain of functionality by using our destination. Since it&apos;s the last thing we&apos;ll do, it&apos;s also a good place to remember to export our bundle.</p>
+<pre><code>bundle.use(bignumber);
+
+module.exports = bundle;
+</code></pre><p>And there we have it, a functional bundle using real data. Because bundles are meant to run in the browser, you can test them very easily with a script defined in <code>package.json</code>. A bare bones test could be the following <code>demo.js</code>, which just calls <code>load</code> and <code>start</code> on our bundle, passing it a minimal config object:</p>
+<pre><code>var bundle = require(&quot;./bundle&quot;);
+bundle.load({
+    destTarget: &quot;body&quot; // the DOM element where the output will be attached
+});
+bundle.start();
+</code></pre><p>To check that it works, you can run <code>npm run start</code> from the terminal in your directory and go to the local IP address it provides in your browser.</p>
+<p>Here&apos;s what the full example <code>bundle.js</code> we wrote looks like:</p>
+<pre><code>var tapir = require(&quot;@vizia/tapir/bundle&quot;),
+    json = require(&quot;@vizia/tapir/sources/json-http&quot;),
+    bignumber = require(&quot;@vizia/destination-big-number&quot;);
+
+var bundle = tapir(),
+    sourceOptions = {
+        throttle: 60000
+    };
+
+bundle.use(json(&quot;http://api.fixer.io/latest?base=USD&amp;symbols=GBP&quot;, sourceOptions));
+bundle.use(function getNumber(row) {
+    return {
+        value: (row.rates.GBP * 100)
+    };
+});
+bundle.use(bignumber);
+
+module.exports = bundle;
+</code></pre><p>If this were a real bundle we wanted to add to Vizia, the only thing left to do would be <a href="../integrating-with-vizia">integrate it with the platform</a>. If you want to try a more complicated bundle first, continue on to the <a href="../tapir-tutorial/1-introduction.html">full tutorial</a>.</p>
 
                                 
                                 </section>
@@ -470,7 +517,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Integrating with Vizia","excerpt":"Once your bundle is built it can be added to Vizia.","level":"1.6","depth":1,"next":{"title":"Option Views index","level":"1.6.1","depth":2,"path":"integrating-with-vizia/option-views.md","ref":"./integrating-with-vizia/option-views.md","articles":[]},"previous":{"title":"destination-table","level":"1.5.4","depth":2,"path":"tapir-modules/destination-table.md","ref":"./tapir-modules/destination-table.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"integrating-with-vizia/README.md","mtime":"2017-03-02T13:44:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-15T15:47:16.382Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Consuming a public API","level":"1.3.1","depth":2,"next":{"title":"Tapir Tutorial","level":"1.4","depth":1,"path":"tapir-tutorial/1-introduction.md","ref":"./tapir-tutorial/1-introduction.md","articles":[{"title":"Creating a Source","level":"1.4.1","depth":2,"path":"tapir-tutorial/2-creating-a-source.md","ref":"./tapir-tutorial/2-creating-a-source.md","articles":[]},{"title":"Creating a Destination","level":"1.4.2","depth":2,"path":"tapir-tutorial/3-creating-a-destination.md","ref":"./tapir-tutorial/3-creating-a-destination.md","articles":[]},{"title":"Transforming our Data","level":"1.4.3","depth":2,"path":"tapir-tutorial/4-transforming-our-data.md","ref":"./tapir-tutorial/4-transforming-our-data.md","articles":[]},{"title":"Putting the Pieces Together","level":"1.4.4","depth":2,"path":"tapir-tutorial/5-putting-the-pieces-together.md","ref":"./tapir-tutorial/5-putting-the-pieces-together.md","articles":[]},{"title":"Testing a Complete Bundle","level":"1.4.5","depth":2,"path":"tapir-tutorial/6-testing-a-complete-bundle.md","ref":"./tapir-tutorial/6-testing-a-complete-bundle.md","articles":[]},{"title":"Reusing Code","level":"1.4.6","depth":2,"path":"tapir-tutorial/7-reusing-code-to-make-a-second-bundle.md","ref":"./tapir-tutorial/7-reusing-code-to-make-a-second-bundle.md","articles":[]}]},"previous":{"title":"Quickstart guides","level":"1.3","depth":1,"ref":"","articles":[{"title":"Consuming a public API","level":"1.3.1","depth":2,"path":"quickstarts/public-api.md","ref":"./quickstarts/public-api.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"quickstarts/public-api.md","mtime":"2017-03-15T15:46:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-15T15:47:16.382Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
