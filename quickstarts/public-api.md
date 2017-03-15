@@ -35,6 +35,8 @@ bundle.use(json("http://api.fixer.io/latest?base=USD&symbols=GBP", sourceOptions
 
 The API we passed in will provide us some information about the value of the British Pound against the US Dollar. We can't use it directly, though. First, we need to get the property containing the actual exchange rate from the JSON we've been provided and return it with the correct key. Next, since `destination-big-number` is biased toward integers, we'll multiply by 100 to show the number of pence in a dollar instead of a decimal. This transformation is specific to this combination of API data and destination, so instead of getting it from a module we'll create it inline with a new function.
 
+> The API we're using in our example returns a single result, but we could use this same function if it returned an array of results. The only difference is that we'd add the [split transform](https://github.com/vizia/tapir/tree/master/transforms/split) as a dependency, and use it before this custom transform with `bundle.use(split());`
+
 ```
 bundle.use(function getNumber(row) {
     return {
