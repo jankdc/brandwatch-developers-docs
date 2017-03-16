@@ -5,6 +5,8 @@
     * [Getting Started with Tapir](./tapir-api/getting-started.md)
     * [Example package.json](./tapir-api/package-json.md)
     * [The manifest.json file](./tapir-api/manifest-json.md)
+* Quickstart guides
+    * [Consuming a public API](./quickstarts/public-api.md)
 * [Tapir Tutorial](./tapir-tutorial/1-introduction.md)
     * [Creating a Source](./tapir-tutorial/2-creating-a-source.md)
     * [Creating a Destination](./tapir-tutorial/3-creating-a-destination.md)
