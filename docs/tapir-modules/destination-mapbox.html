@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Tapir Modules · GitBook</title>
+        <title>destination-mapbox · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="source-brandwatch-data.html" />
+    <link rel="next" href="destination-mention-slideshow.html" />
     
     
-    <link rel="prev" href="../tapir-tutorial/7-reusing-code-to-make-a-second-bundle.html" />
+    <link rel="prev" href="destination-globe.html" />
     
 
     </head>
@@ -305,7 +305,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="./">
             
                 <a href="./">
             
@@ -436,7 +436,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.10" data-path="destination-mapbox.html">
+        <li class="chapter active" data-level="1.5.10" data-path="destination-mapbox.html">
             
                 <a href="destination-mapbox.html">
             
@@ -594,7 +594,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Tapir Modules</a>
+        <a href=".." >destination-mapbox</a>
     </h1>
 </div>
 
@@ -606,59 +606,102 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <p>Depending on your bundle&apos;s purpose, you may be able to use or extend one of the generic Tapir modules available in npm rather than writing something new from scratch. While there are simple sources, transforms, and destinations available within the Tapir framework itself, as well as helpers and utilities for you to use in writing your own, these are more complex and production-ready:</p>
-<h1 id="sources">Sources</h1>
-<h3 id="source-brandwatch-data"><a href="source-brandwatch-data.html">source-brandwatch-data</a></h3>
-<p>Import data from Brandwatch.
-<a href="https://github.com/vizia/source-brandwatch-data" target="_blank">Repo</a></p>
-<h3 id="source-google-analytics"><a href="source-google-analytics.html">source-google-analytics</a></h3>
-<p>Source stream for GA data.
-<a href="https://github.com/vizia/source-google-analytics" target="_blank">Repo</a></p>
-<h3 id="source-google-sheets"><a href="source-google-sheets.html">source-google-sheets</a></h3>
-<p>Google spreadsheets for use in Vizia.
-<a href="https://github.com/vizia/source-google-sheets" target="_blank">Repo</a></p>
-<h3 id="source-mentions"><a href="source-mentions.html">source-mentions</a></h3>
-<p>Streaming source for a mentions stream.
-<a href="https://github.com/vizia/source-mentions" target="_blank">Repo</a></p>
-<h1 id="transforms">Transforms</h1>
-<p>(currently, we recommend writing transforms on an as-needed basis, according to the data format of the bundle&apos;s source and destination)</p>
-<h1 id="destinations">Destinations</h1>
-<h3 id="destination-big-number"><a href="destination-big-number.html">destination-big-number</a></h3>
-<p>Display a large, dynamic number.
-<a href="https://github.com/vizia/destination-big-number" target="_blank">Repo</a></p>
-<h3 id="destination-chart"><a href="destination-chart.html">destination-chart</a></h3>
-<p>Use data to build a C3.js chart.
-<a href="https://github.com/vizia/destination-chart" target="_blank">Repo</a></p>
-<h3 id="destination-circle-pack"><a href="destination-circle-pack.html">destination-circle-pack</a></h3>
-<p>Displays data as circles, sized to show relative weight.
-<a href="https://github.com/vizia/destination-circle-pack" target="_blank">Repo</a></p>
-<h3 id="destination-featured-content"><a href="destination-featured-content.html">destination-featured-content</a></h3>
-<p>Rotates a streaming collection of mentions.
-<a href="https://github.com/vizia/destination-featured-content" target="_blank">Repo</a></p>
-<h3 id="destination-globe"><a href="destination-globe.html">destination-globe</a></h3>
-<p>Displays data rendered on a globe.
-<a href="https://github.com/vizia/destination-globe" target="_blank">Repo</a></p>
-<h3 id="destination-mapbox"><a href="destination-mapbox.html">destination-mapbox</a></h3>
-<p>Displays mentions using Mapbox maps.
-<a href="https://github.com/vizia/destination-mapbox" target="_blank">Repo</a></p>
-<h3 id="destination-mention-slideshow"><a href="destination-mention-slideshow.html">destination-mention-slideshow</a></h3>
-<p>Renders mentions using streaming data.
-<a href="https://github.com/vizia/destination-mention-slideshow" target="_blank">Repo</a></p>
-<h3 id="destination-plotly-xy-chart"><a href="destination-plotly-xy-chart.html">destination-plotly-xy-chart</a></h3>
-<p>Displays data in a Plotly chart.
-<a href="https://github.com/vizia/destination-plotly-xy-chart" target="_blank">Repo</a></p>
-<h3 id="destination-stream-graph"><a href="destination-stream-graph.html">destination-stream-graph</a></h3>
-<p>Displays data in a graph, with lines sized to show relative weight.
-<a href="https://github.com/vizia/destination-stream-graph" target="_blank">Repo</a></p>
-<h3 id="destination-table"><a href="destination-table.html">destination-table</a></h3>
-<p>Display data as a table.
-<a href="https://github.com/vizia/destination-table" target="_blank">Repo</a></p>
-<h3 id="destination-treemap"><a href="destination-treemap.html">destination-treemap</a></h3>
-<p>Display data as blocks, sized to show relative weight.
-<a href="https://github.com/vizia/destination-treemap" target="_blank">Repo</a></p>
-<h3 id="destination-word-cloud-d3"><a href="destination-word-cloud-d3.html">destination-word-cloud-d3</a></h3>
-<p>Display data in a word cloud using D3.
-<a href="https://github.com/vizia/destination-word-cloud-d3" target="_blank">Repo</a></p>
+                                <h1 id="destination-mapbox">destination-mapbox</h1>
+<p>A Brandwatch Vizia destination to render volume data using <a href="https://github.com/mapbox/mapbox-gl-js" target="_blank">Mapbox GL JS</a> maps and <a href="https://github.com/d3/d3" target="_blank">D3</a></p>
+<h2 id="demo">Demo</h2>
+<p>To run the demo run <code>npm start</code> and point your browser to the suggested url.</p>
+<h2 id="the-eu-data">The EU data</h2>
+<h3 id="included-countries-list-alpha-3-codes">Included countries list (Alpha 3 codes):</h3>
+<p><code>&apos;ALA&apos;, &apos;ALB&apos;, &apos;AND&apos;, &apos;ARM&apos;, &apos;AUT&apos;, &apos;BEL&apos;, &apos;BGR&apos;, &apos;BIH&apos;, &apos;BLR&apos;, &apos;CHE&apos;, &apos;CYP&apos;, &apos;CZE&apos;, &apos;DEU&apos;, &apos;DNK&apos;, &apos;ESP&apos;, &apos;EST&apos;, &apos;FIN&apos;, &apos;FRA&apos;, &apos;FRO&apos;, &apos;GBR&apos;, &apos;GGY&apos;, &apos;GIB&apos;, &apos;GRC&apos;, &apos;HRV&apos;, &apos;HUN&apos;, &apos;IMN&apos;, &apos;IRL&apos;, &apos;ISL&apos;, &apos;ITA&apos;, &apos;JEY&apos;, &apos;LIE&apos;, &apos;LTU&apos;, &apos;LUX&apos;, &apos;LVA&apos;, &apos;MCO&apos;, &apos;MDA&apos;, &apos;MKD&apos;, &apos;MLT&apos;, &apos;MNE&apos;, &apos;NLD&apos;, &apos;NOR&apos;, &apos;POL&apos;, &apos;PRT&apos;, &apos;ROU&apos;, &apos;SMR&apos;, &apos;SRB&apos;, &apos;SVK&apos;, &apos;SVN&apos;, &apos;SWE&apos;, &apos;TUR&apos;, &apos;UKR&apos;, &apos;UNK&apos;, &apos;VAT&apos;</code></p>
+<h3 id="omitted-countries-list-alpha-3-codes">Omitted countries list (Alpha 3 codes):</h3>
+<p>The following countries which are often considered to be part of Europe have been omitted as they are not part of what the Brandwatch API returns when using the <code>eu</code> location filter:</p>
+<p><code>&apos;AZE&apos;, &apos;GEO&apos;, &apos;KAZ&apos;, &apos;RUS&apos;</code></p>
+<h2 id="the-apac-data">The APAC data</h2>
+<h3 id="included-countries-list-alpha-3-codes">Included countries list (Alpha 3 codes):</h3>
+<p><code>AUS&apos;, &apos;BGD&apos;, &apos;BTN&apos;, &apos;IOT&apos;, &apos;BRN&apos;, &apos;KHM&apos;, &apos;CHN&apos;, &apos;HKG&apos;, &apos;IND&apos;, &apos;IDN&apos;, &apos;JPN&apos;, &apos;PRK&apos;, &apos;KOR&apos;, &apos;LAO&apos;, &apos;MAC&apos;, &apos;MDV&apos;, &apos;MYS&apos;, &apos;MNG&apos;, &apos;MMR&apos;, &apos;NPL&apos;, &apos;NZL&apos;, &apos;PAK&apos;, &apos;PNG&apos;, &apos;PHL&apos;, &apos;PHL&apos;, &apos;SGP&apos;, &apos;LKA&apos;, &apos;TWN&apos;, &apos;THA&apos;, &apos;TLS&apos;, &apos;VNM&apos;</code></p>
+<h3 id="included-countries-list-alpha-2-codes">Included countries list (Alpha 2 codes):</h3>
+<p><code>&apos;AU&apos;, &apos;BD&apos;, &apos;BT&apos;, &apos;IO&apos;, &apos;BN&apos;, &apos;KH&apos;, &apos;CN&apos;, &apos;HK&apos;, &apos;IN&apos;, &apos;ID&apos;, &apos;JP&apos;, &apos;KP&apos;, &apos;KR&apos;, &apos;LA&apos;, &apos;MO&apos;, &apos;MV&apos;, &apos;MY&apos;, &apos;MN&apos;, &apos;MM&apos;, &apos;NP&apos;, &apos;NZ&apos;, &apos;PK&apos;, &apos;SG&apos;, &apos;LK&apos;, &apos;TW&apos;, &apos;TL&apos;, &apos;VN&apos;</code></p>
+<h2 id="making-the-maps">Making the maps</h2>
+<p>These sample commands are based around the EU map but are also valid for the APAC map.</p>
+<p>To manipulate the shape files install GDAL with the following command:</p>
+<p><code>brew install gdal</code></p>
+<p>TopoJSON can be installed with the following command:</p>
+<p><code>npm install -g topojson</code></p>
+<h3 id="converting-the-data-from-shape-file-to-geojson">Converting the data from shape file to GeoJSON</h3>
+<p>The following command will generate a <code>subunits.json</code> GeoJSON map for all the countries in the list that match the <code>ADM0_A3</code> property:</p>
+<p><code>ogr2ogr  -f GeoJSON  -where &quot;ADM0_A3 IN (&apos;ALA&apos;, &apos;ALB&apos;, &apos;AND&apos;, &apos;ARM&apos;, &apos;AUT&apos;, &apos;BEL&apos;, &apos;BGR&apos;, &apos;BIH&apos;, &apos;BLR&apos;, &apos;CHE&apos;, &apos;CYP&apos;, &apos;CZE&apos;, &apos;DEU&apos;, &apos;DNK&apos;, &apos;ESP&apos;, &apos;EST&apos;, &apos;FIN&apos;, &apos;FRA&apos;, &apos;FRO&apos;, &apos;GBR&apos;, &apos;GGY&apos;, &apos;GIB&apos;, &apos;GRC&apos;, &apos;HRV&apos;, &apos;HUN&apos;, &apos;IMN&apos;, &apos;IRL&apos;, &apos;ISL&apos;, &apos;ITA&apos;, &apos;JEY&apos;, &apos;LIE&apos;, &apos;LTU&apos;, &apos;LUX&apos;, &apos;LVA&apos;, &apos;MCO&apos;, &apos;MDA&apos;, &apos;MKD&apos;, &apos;MLT&apos;, &apos;MNE&apos;, &apos;NLD&apos;, &apos;NOR&apos;, &apos;POL&apos;, &apos;PRT&apos;, &apos;ROU&apos;, &apos;SMR&apos;, &apos;SRB&apos;, &apos;SVK&apos;, &apos;SVN&apos;, &apos;SWE&apos;, &apos;TUR&apos;, &apos;UKR&apos;, &apos;UNK&apos;, &apos;VAT&apos;)&quot;  subunits.json  ne_10m_admin_0_map_subunits.shp</code></p>
+<p>If we wanted to add some points for the major cities (i.e. like in the vizia.old d3 globe) we could use something like the command below. This generates a <code>places.json</code> GeoJSON file for all the countries in the list that match the <code>ISO_A2</code> property. The <code>ISO_A2</code> format is used here instead of the <code>ADM0_A3</code> because the populated places shape file only provides data in this format.</p>
+<p><code>ogr2ogr  -f GeoJSON  -where &quot;ISO_A2 IN (&apos;PT&apos;, &apos;ES&apos;, &apos;IE&apos;, &apos;IS&apos;, &apos;GB&apos;, &apos;AD&apos;, &apos;FO&apos;, &apos;FR&apos;, &apos;BE&apos;, &apos;MC&apos;, &apos;LU&apos;, &apos;CH&apos;, &apos;NL&apos;, &apos;DK&apos;, &apos;DE&apos;, &apos;NO&apos;, &apos;FL&apos;, &apos;VA&apos;, &apos;SM&apos;, &apos;IT&apos;, &apos;AT&apos;, &apos;SE&apos;, &apos;SI&apos;, &apos;CZ&apos;, &apos;HR&apos;, &apos;BA&apos;, &apos;MT&apos;, &apos;PL&apos;, &apos;HU&apos;, &apos;SK&apos;, &apos;ME&apos;, &apos;LT&apos;, &apos;LV&apos;, &apos;FI&apos;, &apos;AL&apos;, &apos;RS&apos;, &apos;XK&apos;, &apos;EE&apos;, &apos;MK&apos;, &apos;GR&apos;, &apos;RO&apos;, &apos;BG&apos;, &apos;BY&apos;, &apos;MD&apos;, &apos;UA&apos;) AND SCALERANK &lt; 5&quot;  places.json  ne_10m_populated_places.shp</code></p>
+<p>All the above command assumes that you have unzipped the <code>ne_10m_admin_0_map_subunits.zip</code> in your directory.</p>
+<h3 id="converting-the-geojson-map-to-topojson">Converting the GeoJSON map to TopoJSON</h3>
+<p>From the <a href="https://github.com/mbostock/topojson" target="_blank">topojson repository</a>:</p>
+<blockquote>
+<p>TopoJSON is an extension of GeoJSON that encodes topology. Rather than representing geometries discretely, geometries in TopoJSON files are stitched together from shared line segments called arcs. TopoJSON eliminates redundancy, offering much more compact representations of geometry than with GeoJSON; typical TopoJSON files are 80% smaller than their GeoJSON equivalents.</p>
+</blockquote>
+<p>The following command will generate a <code>eu.json</code> TopoJSON map starting from the <code>subunits.json</code> map created previously. <code>ADMIN</code> is the chosen property to promote to geometry <code>id</code> and only the <code>NAME</code> property is being plucked for each country, this is also being renamed to <code>name</code>.</p>
+<p><code>topojson -o eu.json --id-property ADMIN -p name=NAME -- subunits.json</code></p>
+<p>N.B. This commands are valid for the v1.x of topojson, I&apos;ll hopefully update these soon to support v2.x.</p>
+<h2 id="merging-the-population-population-density-and-bounding-box-data-with-the-topojson-map">Merging the population, population density and bounding box data with the TopoJSON map</h2>
+<p>To update a topojson map with new metadata coming from a CSV/TSV (the only supported formats) run the following:</p>
+<p><code>topojson -o eu-with-metadata.json -e eu-metadata.csv --id-property=name -p -- eu.json</code></p>
+<p>See the topojson CLI <a href="https://github.com/mbostock/topojson/wiki/Command-Line-Reference/" target="_blank">documentation</a> for a detailed explaination of the various flags. The <code>--id-property</code> is the name of the GeoJSON feature property to promote to geometry <code>id</code> which is also used to join the data coming in from the CSV/TSV.</p>
+<h2 id="data-sources">Data Sources:</h2>
+<p>Shape files and other GIS data:</p>
+<ul>
+<li><a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/" target="_blank">Natural Earth 1:10m cultural vectors</a></li>
+</ul>
+<p>ISO-3166 country codes:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">Alpha 2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3" target="_blank">Alpha 3</a></li>
+</ul>
+<p>Population and population density data (km<sup>2</sup>):</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Area_and_population_of_European_countries" target="_blank">EU</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Asia-Pacific#Main_countries_and_territories_data" target="_blank">APAC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Turkey" target="_blank">Turkey</a></li>
+</ul>
+<p>Bounding boxes:</p>
+<ul>
+<li><a href="http://isithackday.com/geoplanet-explorer/" target="_blank">GeoPlanet</a></li>
+<li><a href="http://boundingbox.klokantech.com/" target="_blank">Bounding Box Tool</a></li>
+</ul>
+<p>Colour scales:</p>
+<ul>
+<li><a href="https://bids.github.io/colormap/" target="_blank">MPL Colormaps</a></li>
+</ul>
+<h3 id="known-issues">Known Issues</h3>
+<p>Unfortunately the resulting map is often not going to work right away and will need a bit of manual clean up. I believe there are some GDAL commands that should solve some of these issues but for the time being here&apos;s a list of the manual enchanments I had to do in orider to produce the final EU/APAC map. Look away now!</p>
+<h3 id="eu-issues">EU Issues</h3>
+<ul>
+<li>Merge the territories (Polygons/MultiPolygons arcs) for the following countries: Bosnia and Herzegovina, Denmark (do not to include the Faroe Islands), Spain, France, Guernsey, Italy, Norway, Serbia</li>
+<li>Generate (as there is no ADM0_A3 entry for) Belgium from merging the 3 separate territories</li>
+<li>Generate (as there is no ADM0_A3 entry for) the United Kingdom from merging the 4 separate territories, making sure not to include Guernsey, Gibraltar, the Isle of Man and Jersey.</li>
+<li>Rename <code>Fed. of Bos. &amp; Herz.</code> -&gt; <code>Bosnia and Herzegovina</code></li>
+<li>Rename <code>Czech Rep.</code> -&gt; <code>Czech Republic</code></li>
+<li>Rename <code>Faeroe Is.</code> -&gt; <code>Faeroe Is.</code> to <code>Faroe Islands</code></li>
+<li>Rename <code>Vatican</code> -&gt; <code>Vatican City</code></li>
+<li>Rename <code>Ireland</code> -&gt; <code>Republic of Ireland</code></li>
+<li>Rename <code>Macedonia</code> -&gt; <code>Republic of Macedonia</code></li>
+</ul>
+<h3 id="apac-issues">APAC Issues</h3>
+<ul>
+<li>Merge the territories (Polygons/MultiPolygons arcs) for the following countries: Australia, China, India, British Indian Ocean Territory, Japan, South Korea, North Korea, New Zealand, Papua New Guinea and East Timor</li>
+<li>Merge <code>Macao</code> with <code>China</code> as it is not an independent terriory in the Brandwatch API</li>
+<li>Rename <code>China</code> -&gt; <code>People&apos;s Republic of China</code></li>
+<li>Rename <code>Cambodia</code> -&gt; <code>Cambodia Khmer</code></li>
+<li>Rename <code>South Korea</code> -&gt; <code>Republic of Korea</code></li>
+<li>Rename <code>North Korea</code> -&gt; <code>Democratic People&apos;s Republic of Korea</code></li>
+<li>Rename <code>Timor-Leste</code> - <code>East Timor</code></li>
+<li>Rename <code>Taiwan</code> -&gt; <code>Republic of China (Taiwan)</code></li>
+</ul>
+<h2 id="data-normalisation">Data Normalisation</h2>
+<p>At the moment, there are three options for the values to use in choropleth maps (specified with the URL <code>metric</code> argument):</p>
+<ul>
+<li><code>value</code>: raw mention volume per area,</li>
+<li><code>valuePopulationNormal</code>: mention volume over population by area - with a relative indicator between -100 and 100 for figure,</li>
+<li><code>valuePopulationSmooth</code>: Empirical Bayes smoothing (implementation details from <a href="http://www.dpi.inpe.br/gilberto/tutorials/software/geoda/tutorials/w6_rates_slides.pdf" target="_blank">here</a>) applied to mention volume over population by area - also with a relative figure between -100 and 100.</li>
+</ul>
 
                                 
                                 </section>
@@ -676,7 +719,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tapir Modules","excerpt":"Index of generic modules available in NPM","level":"1.5","depth":1,"next":{"title":"source-brandwatch-data","level":"1.5.1","depth":2,"path":"tapir-modules/source-brandwatch-data.md","ref":"./tapir-modules/source-brandwatch-data.md","articles":[]},"previous":{"title":"Reusing Code","level":"1.4.6","depth":2,"path":"tapir-tutorial/7-reusing-code-to-make-a-second-bundle.md","ref":"./tapir-tutorial/7-reusing-code-to-make-a-second-bundle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-modules/README.md","mtime":"2017-03-22T09:31:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-22T09:38:20.226Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"destination-mapbox","level":"1.5.10","depth":2,"next":{"title":"destination-mention-slideshow","level":"1.5.11","depth":2,"path":"tapir-modules/destination-mention-slideshow.md","ref":"./tapir-modules/destination-mention-slideshow.md","articles":[]},"previous":{"title":"destination-globe","level":"1.5.9","depth":2,"path":"tapir-modules/destination-globe.md","ref":"./tapir-modules/destination-globe.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-modules/destination-mapbox.md","mtime":"2017-03-21T15:47:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-22T09:38:20.226Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -137,6 +137,9 @@ header#bw-header a:hover {
 .book-body .body-inner {
   padding-bottom: 7em;
 }
+.book-header h1 {
+    opacity: 100;
+}
 /* temporary: hide the search box */
 #book-search-input {
   border-top-color: #fff;
