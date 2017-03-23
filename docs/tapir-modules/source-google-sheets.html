@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Tapir Modules · GitBook</title>
+        <title>source-google-sheets · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="source-brandwatch-data.html" />
+    <link rel="next" href="source-mentions.html" />
     
     
-    <link rel="prev" href="../tapir-tutorial/7-reusing-code-to-make-a-second-bundle.html" />
+    <link rel="prev" href="source-google-analytics.html" />
     
 
     </head>
@@ -305,7 +305,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="./">
             
                 <a href="./">
             
@@ -345,7 +345,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="source-google-sheets.html">
+        <li class="chapter active" data-level="1.5.3" data-path="source-google-sheets.html">
             
                 <a href="source-google-sheets.html">
             
@@ -594,7 +594,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Tapir Modules</a>
+        <a href=".." >source-google-sheets</a>
     </h1>
 </div>
 
@@ -606,59 +606,28 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <p>Depending on your bundle&apos;s purpose, you may be able to use or extend one of the generic Tapir modules available in npm rather than writing something new from scratch. While there are simple sources, transforms, and destinations available within the Tapir framework itself, as well as helpers and utilities for you to use in writing your own, these are more complex and production-ready:</p>
-<h1 id="sources">Sources</h1>
-<h3 id="source-brandwatch-data"><a href="source-brandwatch-data.html">source-brandwatch-data</a></h3>
-<p>Import data from Brandwatch.
-<a href="https://github.com/vizia/source-brandwatch-data" target="_blank">Repo</a></p>
-<h3 id="source-google-analytics"><a href="source-google-analytics.html">source-google-analytics</a></h3>
-<p>Source stream for GA data.
-<a href="https://github.com/vizia/source-google-analytics" target="_blank">Repo</a></p>
-<h3 id="source-google-sheets"><a href="source-google-sheets.html">source-google-sheets</a></h3>
-<p>Google spreadsheets for use in Vizia.
-<a href="https://github.com/vizia/source-google-sheets" target="_blank">Repo</a></p>
-<h3 id="source-mentions"><a href="source-mentions.html">source-mentions</a></h3>
-<p>Streaming source for a mentions stream.
-<a href="https://github.com/vizia/source-mentions" target="_blank">Repo</a></p>
-<h1 id="transforms">Transforms</h1>
-<p>(currently, we recommend writing transforms on an as-needed basis, according to the data format of the bundle&apos;s source and destination)</p>
-<h1 id="destinations">Destinations</h1>
-<h3 id="destination-big-number"><a href="destination-big-number.html">destination-big-number</a></h3>
-<p>Display a large, dynamic number.
-<a href="https://github.com/vizia/destination-big-number" target="_blank">Repo</a></p>
-<h3 id="destination-chart"><a href="destination-chart.html">destination-chart</a></h3>
-<p>Use data to build a C3.js chart.
-<a href="https://github.com/vizia/destination-chart" target="_blank">Repo</a></p>
-<h3 id="destination-circle-pack"><a href="destination-circle-pack.html">destination-circle-pack</a></h3>
-<p>Displays data as circles, sized to show relative weight.
-<a href="https://github.com/vizia/destination-circle-pack" target="_blank">Repo</a></p>
-<h3 id="destination-featured-content"><a href="destination-featured-content.html">destination-featured-content</a></h3>
-<p>Rotates a streaming collection of mentions.
-<a href="https://github.com/vizia/destination-featured-content" target="_blank">Repo</a></p>
-<h3 id="destination-globe"><a href="destination-globe.html">destination-globe</a></h3>
-<p>Displays data rendered on a globe.
-<a href="https://github.com/vizia/destination-globe" target="_blank">Repo</a></p>
-<h3 id="destination-mapbox"><a href="destination-mapbox.html">destination-mapbox</a></h3>
-<p>Displays mentions using Mapbox maps.
-<a href="https://github.com/vizia/destination-mapbox" target="_blank">Repo</a></p>
-<h3 id="destination-mention-slideshow"><a href="destination-mention-slideshow.html">destination-mention-slideshow</a></h3>
-<p>Renders mentions using streaming data.
-<a href="https://github.com/vizia/destination-mention-slideshow" target="_blank">Repo</a></p>
-<h3 id="destination-plotly-xy-chart"><a href="destination-plotly-xy-chart.html">destination-plotly-xy-chart</a></h3>
-<p>Displays data in a Plotly chart.
-<a href="https://github.com/vizia/destination-plotly-xy-chart" target="_blank">Repo</a></p>
-<h3 id="destination-stream-graph"><a href="destination-stream-graph.html">destination-stream-graph</a></h3>
-<p>Displays data in a graph, with lines sized to show relative weight.
-<a href="https://github.com/vizia/destination-stream-graph" target="_blank">Repo</a></p>
-<h3 id="destination-table"><a href="destination-table.html">destination-table</a></h3>
-<p>Display data as a table.
-<a href="https://github.com/vizia/destination-table" target="_blank">Repo</a></p>
-<h3 id="destination-treemap"><a href="destination-treemap.html">destination-treemap</a></h3>
-<p>Display data as blocks, sized to show relative weight.
-<a href="https://github.com/vizia/destination-treemap" target="_blank">Repo</a></p>
-<h3 id="destination-word-cloud-d3"><a href="destination-word-cloud-d3.html">destination-word-cloud-d3</a></h3>
-<p>Display data in a word cloud using D3.
-<a href="https://github.com/vizia/destination-word-cloud-d3" target="_blank">Repo</a></p>
+                                <h1 id="viziasource-google-sheets">@vizia/source-google-sheets</h1>
+<p>This is your spreadsheets on Vizia.</p>
+<h2 id="config">Config</h2>
+<pre><code>{
+    scene: {
+        options: {
+            tokens: {
+                google: &apos;your-google-token&apos;
+            },
+            sheetId: &apos;your-spreadsheet-id&apos;,
+            range: &apos;[Sheet1] your-range&apos;
+        }
+    }
+}
+</code></pre><h2 id="schema">Schema</h2>
+<p>This source returns an instance of google sheets <a href="https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values#ValueRange" target="_blank">ValueRange</a></p>
+<h2 id="demo">Demo</h2>
+<pre><code>npm start -- -t &lt;YOUR_GOOGLE_OAUTH_TOKEN&gt; [-r custom range] [-s sheet id]
+</code></pre><p>By default only a token is required and the sheet and range will default to <a href="https://docs.google.com/spreadsheets/d/1wx7uUAoHTklrl7uWWmjBBZHz2-OhEHsWXGHAeW2-5t0/edit#gid=0" target="_blank">a dummy testing sheet</a> and &quot;Sheet1&quot;</p>
+<p>See <a href="https://developers.google.com/sheets/api/guides/concepts" target="_blank">api docs</a> for info on range syntax.</p>
+<h2 id="getting-a-token-internal-bw">Getting a token (Internal BW)</h2>
+<p>Simplest way is to go to your dev instance of <a href="https://auth.vizia.vizialocal.io" target="_blank">auth service</a> and generate a google token.</p>
 
                                 
                                 </section>
@@ -676,7 +645,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tapir Modules","excerpt":"Index of generic modules available in NPM","level":"1.5","depth":1,"next":{"title":"source-brandwatch-data","level":"1.5.1","depth":2,"path":"tapir-modules/source-brandwatch-data.md","ref":"./tapir-modules/source-brandwatch-data.md","articles":[]},"previous":{"title":"Reusing Code","level":"1.4.6","depth":2,"path":"tapir-tutorial/7-reusing-code-to-make-a-second-bundle.md","ref":"./tapir-tutorial/7-reusing-code-to-make-a-second-bundle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-modules/README.md","mtime":"2017-03-22T09:31:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-22T09:38:20.226Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"source-google-sheets","level":"1.5.3","depth":2,"next":{"title":"source-mentions","level":"1.5.4","depth":2,"path":"tapir-modules/source-mentions.md","ref":"./tapir-modules/source-mentions.md","articles":[]},"previous":{"title":"source-google-analytics","level":"1.5.2","depth":2,"path":"tapir-modules/source-google-analytics.md","ref":"./tapir-modules/source-google-analytics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tapir-modules/source-google-sheets.md","mtime":"2017-03-21T14:43:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-22T09:38:20.226Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
