@@ -1,5 +1,7 @@
 # Stream Graph Destination
 
+![example of a stream graph destination](../images/screenshots/destination-stream-graph.png)
+
 ## Data Format
 
 See [schema.json](https://github.com/vizia/destination-stream-graph/schema.json) for a json-schema specifying the format of valid input data to this destination.

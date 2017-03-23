@@ -2,6 +2,8 @@
 
 Rotates a streaming collection of mentions. The destination accepts objects with a format described in the [schema](https://github.com/vizia/destination-featured-content/schema.json).
 
+![example of a featured content destination](../images/screenshots/destination-featured-content.png)
+
 ## Demo
 
 ```sh

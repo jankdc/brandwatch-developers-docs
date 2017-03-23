@@ -2,6 +2,8 @@
 
 Table destination encompassing table and bars views.
 
+![example of a table destination](../images/screenshots/destination-table.png)
+
 ## Demo
 
 1. `npm install`

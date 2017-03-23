@@ -1,6 +1,10 @@
 # destination-chart
 A Vizia Tapir wrapped [C3 chart](http://c3js.org/) able to render and update itself using streaming data
 
+![chart destination in spline mode](../images/screenshots/destination-chart-spline.png)
+![chart destination in donut mode](../images/screenshots/destination-chart-donut.png)
+![chart destination in bar chart mode](../images/screenshots/destination-chart-bar.png)
+
 ### Options
 
 ChartDestination is constructed with an options object with the following properties:
