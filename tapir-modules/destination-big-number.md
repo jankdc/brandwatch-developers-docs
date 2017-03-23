@@ -1,5 +1,7 @@
 # destination-big-number
 
+![example of a big number destination](../images/screenshots/destination-big-number.png)
+
 ### `npm run-script`
 
 Running the above command will output the following information about the scripts availiable:
