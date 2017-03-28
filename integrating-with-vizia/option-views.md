@@ -24,7 +24,7 @@ Displays a dropdown list of possible chart types: Doughnut, Spline, or Stacked C
 Displays a dropdown of the categories associated with the chosen data source. Returns the category or categories selected as `category`.
 
 ## CombinedBundleAuthOptionsView
-Displays a list of auth providers specified in `manifest.json`, where each provider displays a list of existing tokens, as well as the option to add a new one. Returns the option as a `tokens` map where each key is the provider's name that maps to the currently selected access token.
+Displays a list of auth providers specified in `manifest.json`, where each provider displays a list of existing tokens, as well as the option to add a new one. Returns the option as a `tokens` map where each key is a provider's name that maps to its currently selected access token.
 
 ## CombinedQueryControlsNoCategoryFiltersOptionsView
 The same as **CombinedQueryControlsOptionsView**, but without the category filters.
