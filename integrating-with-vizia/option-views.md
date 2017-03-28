@@ -17,14 +17,14 @@ Displays a checkbox labelled "Show average line" and a text input for "Number of
 ## BlacklistedWordsView
 Displays a control to allow backlisted words to be entered one at a time. Returns the words entered as `blacklistedWords`.
 
-## BundleAuthOptionsView
-Displays a list of existing tokens for a specified provider, as well as the option to add a new one. Returns the selected token as `[provider name]`.
-
 ## CategoryBreakdownLineTypeOptionsView
 Displays a dropdown list of possible chart types: Doughnut, Spline, or Stacked Column. Returns the option selected as `catBreakdownChartType`.
 
 ## CategoryOptionsView
 Displays a dropdown of the categories associated with the chosen data source. Returns the category or categories selected as `category`.
+
+## CombinedBundleAuthOptionsView
+Displays a list of auth providers specified in `manifest.json`, where each provider displays a list of existing tokens, as well as the option to add a new one. Returns the option as a `tokens` map where each key is a provider's name that maps to its currently selected access token.
 
 ## CombinedQueryControlsNoCategoryFiltersOptionsView
 The same as **CombinedQueryControlsOptionsView**, but without the category filters.
